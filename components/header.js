@@ -7,6 +7,7 @@ import logo1 from '@/public/images/logo1.webp'
 import logo2 from '@/public/images/logo2.webp'
 import lifesOn from '@/public/images/lifes-on.webp'
 import MenuOne from '@/components/menuOne'
+import MenuTwo from '@/components/menuTwo'
 
 const Header = () => {
   return (
@@ -16,7 +17,7 @@ const Header = () => {
             <Image src={logo1} alt="Manipal Hospitals" />
           </div>
           <div className='flex flex-row items-center justify-end gap-2'>
-            <Link href="#" className='btn-lab-report font-semibold rounded py-2 px-4'>Access Lab Reports</Link>
+            <Link href="#" className='btn-lab-report font-semibold rounded py-2 px-4 flex-grow'>Access Lab Reports</Link>
             <Link href="#" className='btn-appoinment font-semibold flex flex-row gap-2 items-center rounded py-2 px-4 max-[991px]:rounded-full max-[991px]:p-2'>
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               <span className='max-[991px]:hidden'>Appointment</span>
@@ -34,8 +35,14 @@ const Header = () => {
           </div>
         </div>
         <div className='nav-bar min-h-[40px] w-full border-b-[3px] border-b-primary'>
-          <div className='flex flex-row items-center justify-end gap-2 max-[575px]:hidden px-4 md:w-full lg:w-[1000px] xl:w-[1200px] 2xl:w-[1400px] mx-auto h-full'>
-            <MenuOne />
+          <div className='flex flex-row items-center justify-end gap-4 max-[575px]:hidden px-4 md:w-full lg:w-[1000px] xl:w-[1200px] 2xl:w-[1400px] mx-auto h-full'>
+            <MenuOne className="flex-grow"/>
+            <MenuTwo />
+            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+              <line x1="10" x2="20" y1="12" y2="12"/>
+              <line x1="4" x2="20" y1="6" y2="6"/>
+              <line x1="4" x2="20" y1="18" y2="18"/>
+            </svg>
           </div>
         </div>
     </div>
