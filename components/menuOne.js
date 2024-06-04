@@ -11,7 +11,23 @@ import {
     NavigationMenuTrigger,
     NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
-  
+
+import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { ChevronDown } from "lucide-react" 
 
 const MenuOne = () => {
     const Excellence = [
@@ -127,10 +143,11 @@ const MenuOne = () => {
         { name: "Neuromuscular Clinic", href: "https://www.manipalhospitals.com/specialities/neuromuscular-clinic/" }
       ];      
     return (
+    <>
     <NavigationMenu>
         <NavigationMenuList>
             <NavigationMenuItem className='my-2'>
-                <NavigationMenuTrigger className='bg-transparent h-[30px] text-[#fff] text-[13px] font-semibold px-2'>Centre of Excellence</NavigationMenuTrigger>
+                <NavigationMenuTrigger className='bg-transparent h-[30px] text-[#fff] text-[13px] font-semibold'>Centre of Excellence</NavigationMenuTrigger>
                 <NavigationMenuContent className='pt-2'>
                     <ul className="grid gap-6 p-6 md:w-[600px] lg:w-[850px] xl:w-[1100px] grid-cols-[1fr_1fr_1fr]">
                         <li className="row-span-3">
@@ -138,7 +155,7 @@ const MenuOne = () => {
                             <ul className='py-2 w-full h-[60vh] overflow-y-scroll overflow-x-hidden px-3'>
                                 {Excellence.map((item)=>{
                                     return(
-                                        <li key={item.name} className='menu-item w-[90%] px-[2px] py-[8px] border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>
+                                        <li key={item.name} className='w-[90%] px-[2px] py-[8px] border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>
                                             <Link href="#" legacyBehavior passHref>
                                                 <p className='hover:translate-x-4 duration-700'>{item.name}</p>
                                             </Link>
@@ -152,7 +169,7 @@ const MenuOne = () => {
                             <ul className='py-2 w-full h-[60vh] overflow-y-scroll overflow-x-hidden px-3'>
                                 {specialities.map((item)=>{
                                     return(
-                                        <li key={item.name} className='menu-item w-[90%] px-[2px] py-[8px] border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>
+                                        <li key={item.name} className='w-[90%] px-[2px] py-[8px] border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>
                                             <Link href="#" legacyBehavior passHref>
                                                 <p className='hover:translate-x-4 duration-700'>{item.name}</p>
                                             </Link>
@@ -166,7 +183,7 @@ const MenuOne = () => {
                             <ul className='py-2 w-full h-[60vh] overflow-y-scroll overflow-x-hidden px-3'>
                                 {clinics.map((item)=>{
                                     return(
-                                        <li key={item.name} className='menu-item w-[90%] px-[2px] py-[8px] border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>
+                                        <li key={item.name} className='w-[90%] px-[2px] py-[8px] border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>
                                             <Link href="#" legacyBehavior passHref>
                                                 <p className='hover:translate-x-4 duration-700'>{item.name}</p>
                                             </Link>
@@ -178,28 +195,160 @@ const MenuOne = () => {
                     </ul>
                 </NavigationMenuContent>
             </NavigationMenuItem>
-            <NavigationMenuItem>
-                <Link href="#" legacyBehavior passHref>
-                    <NavigationMenuLink className='bg-transparent h-[30px] text-[#fff] text-[13px] font-semibold px-2'>
-                        Doctors
-                    </NavigationMenuLink>
-                </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-                <NavigationMenuTrigger className='bg-transparent h-[30px] text-[#fff] text-[13px] font-semibold px-2'>Hospitals</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                    <NavigationMenuLink>Link</NavigationMenuLink>
-                </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-                <Link href="#" legacyBehavior passHref>
-                    <NavigationMenuLink className='bg-transparent h-[30px] text-[#fff] text-[13px] font-semibold px-2'>
-                        International Patients
-                    </NavigationMenuLink>
-                </Link>
-            </NavigationMenuItem>
         </NavigationMenuList>
     </NavigationMenu>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild={true}>
+        <Button variant="transperant" className='btn-hospitals bg-transparent text-[#fff] h-[30px] text-[13px] font-semibold px-2 border-none hover:bg-[#fff] hover:text-primary rounded border-b-[1px] border-b-slate-400/60'>
+            Hospitals
+            <ChevronDown className="chevronDown relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180" aria-hidden="true" />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="w-56">
+        <DropdownMenuGroup>
+            <DropdownMenuSub>
+                <DropdownMenuSubTrigger className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>
+                    <span >Bengaluru</span>
+                </DropdownMenuSubTrigger>
+                <DropdownMenuPortal>
+                    <DropdownMenuSubContent className='p-2 ml-2'>
+                        <span className='text-xs font-semibold'>Bengaluru</span>
+                        <div className='grid grid-cols-2 gap-2'>
+                            <DropdownMenuItem className='sub-menu-item border-b-[1px] border-b-slate-400/60 min-w-[150px] pt-0'>
+                                <span>Doddaballapur</span>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className='sub-menu-item border-b-[1px] border-b-slate-400/60 min-w-[150px] pt-0'>
+                                <span>Hebbal</span>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className='sub-menu-item border-b-[1px] border-b-slate-400/60 min-w-[150px] pt-0'>
+                                <span>Jayanagar</span>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className='sub-menu-item border-b-[1px] border-b-slate-400/60 min-w-[150px] pt-0'>
+                                <span>Malleshwaram</span>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className='sub-menu-item border-b-[1px] border-b-slate-400/60 min-w-[150px] pt-0'>
+                                <span>Millers Road</span>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className='sub-menu-item border-b-[1px] border-b-slate-400/60 min-w-[150px] pt-0'>
+                                <span>Old Airport Road</span>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className='sub-menu-item border-b-[1px] border-b-slate-400/60 min-w-[150px] pt-0'>
+                                <span>Sarjapur Road</span>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className='sub-menu-item border-b-[1px] border-b-slate-400/60 min-w-[150px] pt-0'>
+                                <span>Varthur Road</span>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className='sub-menu-item min-w-[150px] pt-0'>
+                                <span>Whitefield</span>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className='sub-menu-item min-w-[150px] pt-0'>
+                                <span>Yeshwanthpur</span>
+                            </DropdownMenuItem>
+                        </div>
+                        <div className='flex flex-row items-center justify-between mt-4 gap-4'>
+                            <div className='border-[1px] border-primary rounded-sm p-2'>
+                                <DropdownMenuItem className='sub-menu-item p-[2px]'>
+                                    <span>Clinic</span>
+                                </DropdownMenuItem>
+                            </div>
+                            <div className='flex flex-row items-center justify-end gap-0 border-[1px] border-primary rounded-sm p-2'>
+                                <DropdownMenuItem className='sub-menu-item p-[4px] border-r-[1px] border-primary text-xs'>
+                                    <span>Begur</span>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem className='sub-menu-item p-[4px] border-r-[1px] border-primary text-xs'>
+                                    <span>Brookefield</span>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem className='sub-menu-item p-[4px] border-r-[1px] border-primary text-xs'>
+                                    <span>Budigere</span>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem className='sub-menu-item p-[4px] border-r-[1px] border-primary text-xs'>
+                                    <span>Jayanagar</span>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem className='sub-menu-item p-[4px] text-xs'>
+                                    <span>Sarjapur</span>
+                                </DropdownMenuItem>
+                            </div>
+                        </div>
+                    </DropdownMenuSubContent>
+                </DropdownMenuPortal>
+            </DropdownMenuSub>
+            <DropdownMenuItem className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>Bhubaneswar</DropdownMenuItem>
+            <DropdownMenuSub>
+                <DropdownMenuSubTrigger className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>
+                    <span >Delhi - NCR</span>
+                </DropdownMenuSubTrigger>
+                <DropdownMenuPortal>
+                    <DropdownMenuSubContent className='p-2 ml-2'>
+                        <span className='text-xs font-semibold'>Delhi - NCR</span>
+                        <div className='grid grid-cols-1 gap-2'>
+                            <DropdownMenuItem className='sub-menu-item border-b-[1px] border-b-slate-400/60 min-w-[150px] pt-0'>
+                                <span>Delhi</span>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className='sub-menu-item border-b-[1px] border-b-slate-400/60 min-w-[150px] pt-0'>
+                                <span>Ghaziabad</span>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className='sub-menu-item min-w-[150px] pt-0'>
+                                <span>Gurugram</span>
+                            </DropdownMenuItem>
+                        </div>
+                    </DropdownMenuSubContent>
+                </DropdownMenuPortal>
+            </DropdownMenuSub>
+            <DropdownMenuItem className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>Goa</DropdownMenuItem>
+            <DropdownMenuItem className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>Jaipur</DropdownMenuItem>
+            <DropdownMenuSub>
+                <DropdownMenuSubTrigger className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>
+                    <span >Kolkata</span>
+                </DropdownMenuSubTrigger>
+                <DropdownMenuPortal>
+                <DropdownMenuSubContent className='p-2 ml-2'>
+                        <span className='text-xs font-semibold'>Kolkata</span>
+                        <div className='grid grid-cols-1 gap-2'>
+                            <DropdownMenuItem className='sub-menu-item border-b-[1px] border-b-slate-400/60 min-w-[150px] pt-0'>
+                                <span>Broadway</span>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className='sub-menu-item border-b-[1px] border-b-slate-400/60 min-w-[150px] pt-0'>
+                                <span>Dhakuria</span>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className='sub-menu-item border-b-[1px] border-b-slate-400/60 min-w-[150px] pt-0'>
+                                <span>Mukundapur</span>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className='sub-menu-item min-w-[150px] pt-0'>
+                                <span>Salt Lake</span>
+                            </DropdownMenuItem>
+                        </div>
+                    </DropdownMenuSubContent>
+                </DropdownMenuPortal>
+            </DropdownMenuSub>
+            <DropdownMenuItem className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>Mangaluru</DropdownMenuItem>
+            <DropdownMenuItem className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>Mysuru</DropdownMenuItem>
+            <DropdownMenuItem className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>Patiala</DropdownMenuItem>
+            <DropdownMenuSub>
+                <DropdownMenuSubTrigger className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>
+                    <span >Pune</span>
+                </DropdownMenuSubTrigger>
+                <DropdownMenuPortal>
+                    <DropdownMenuSubContent className='p-2 ml-2'>
+                        <span className='text-xs font-semibold'>Pune</span>
+                        <div className='grid grid-cols-1 gap-2'>
+                            <DropdownMenuItem className='sub-menu-item border-b-[1px] border-b-slate-400/60 min-w-[150px] pt-0'>
+                                <span>Baner</span>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className='sub-menu-item min-w-[150px] pt-0'>
+                                <span>Kharadi</span>
+                            </DropdownMenuItem>
+                        </div>
+                    </DropdownMenuSubContent>
+                </DropdownMenuPortal>
+            </DropdownMenuSub>
+            <DropdownMenuItem className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>Salem</DropdownMenuItem>
+            <DropdownMenuItem className='rounded-none text-[13px] font-medium text-slate-500 hover:text-primary'>Vijayawada</DropdownMenuItem>
+        </DropdownMenuGroup>
+      </DropdownMenuContent>
+    </DropdownMenu>
+    <Link href="#" className='bg-transparent text-[#fff] text-[13px] font-semibold hover:bg-[#ffffff] hover:text-primary px-[8px] py-[5px] h-[30px] rounded'>Doctors</Link>
+    <Link href="#" className='bg-transparent text-[#fff] text-[13px] font-semibold hover:bg-[#ffffff] hover:text-primary px-[8px] py-[5px] h-[30px] rounded'>International Patients</Link>
+    </>
   )
 }
 

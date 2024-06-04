@@ -115,3 +115,19 @@
   /* ::-webkit-scrollbar-thumb:hover {
     background: #b30000; 
   } */
+  /* .chevronDown{
+    transition: .5s ease all;
+  }
+  .btn-hospitals:hover > .chevronDown{
+    transform: rotate(180deg); 
+    color: #284797;
+  } */
+  .sub-menu-item{
+    border-radius: 0px;
+    font-weight: 500;
+    color: slategray;
+    font-size: 13px;
+  }
+  .sub-menu-item{
+    color: text-primary;
+  }

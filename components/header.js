@@ -35,7 +35,7 @@ const Header = () => {
           </div>
         </div>
         <div className='nav-bar min-h-[40px] w-full border-b-[3px] border-b-primary'>
-          <div className='flex flex-row items-center justify-end gap-4 max-[575px]:hidden px-4 md:w-full lg:w-[1000px] xl:w-[1200px] 2xl:w-[1400px] mx-auto h-full'>
+          <div className='flex flex-row items-center justify-end gap-2 max-[575px]:hidden px-4 md:w-full lg:w-[1000px] xl:w-[1200px] 2xl:w-[1400px] mx-auto h-full'>
             <MenuOne className="flex-grow"/>
             <MenuTwo />
             <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
