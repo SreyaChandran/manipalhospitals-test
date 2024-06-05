@@ -144,18 +144,18 @@ const MenuOne = () => {
       ];      
     return (
     <>
-    <NavigationMenu>
+    <NavigationMenu className='max-[767px]:hidden'>
         <NavigationMenuList>
             <NavigationMenuItem className='my-2'>
-                <NavigationMenuTrigger className='bg-transparent h-[30px] text-[#fff] text-[13px] font-semibold'>Centre of Excellence</NavigationMenuTrigger>
-                <NavigationMenuContent className='pt-2'>
-                    <ul className="grid gap-6 p-6 md:w-[600px] lg:w-[850px] xl:w-[1100px] grid-cols-[1fr_1fr_1fr]">
+                <NavigationMenuTrigger className='bg-transparent h-[30px] text-[#fff] menu-li font-semibold'>Centre of Excellence</NavigationMenuTrigger>
+                <NavigationMenuContent className='pt-2 flex'>
+                    <ul className="hospitals-menu-card grid gap-6 p-6 grid-cols-[1fr_1fr_1fr]">
                         <li className="row-span-3">
-                            <p className='text-[13px] font-semibold text-slate-600 mb-2 px-3'>Centre of Excellence</p>
+                            <p className='menu-li font-semibold text-slate-600 mb-2 px-3'>Centre of Excellence</p>
                             <ul className='py-2 w-full h-[60vh] overflow-y-scroll overflow-x-hidden px-3'>
                                 {Excellence.map((item)=>{
                                     return(
-                                        <li key={item.name} className='w-[90%] px-[2px] py-[8px] border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>
+                                        <li key={item.name} className='menu-li w-[90%] px-[2px] py-[8px] border-b-[1px] border-b-slate-400/60 font-medium text-slate-500 hover:text-primary'>
                                             <Link href="#" legacyBehavior passHref>
                                                 <p className='hover:translate-x-4 duration-700'>{item.name}</p>
                                             </Link>
@@ -165,11 +165,11 @@ const MenuOne = () => {
                             </ul>
                         </li>
                         <li className="row-span-3">
-                            <p className='text-[13px] font-semibold text-slate-600 mb-2 px-3'>Other Specialities</p>
+                            <p className='menu-li font-semibold text-slate-600 mb-2 px-3'>Other Specialities</p>
                             <ul className='py-2 w-full h-[60vh] overflow-y-scroll overflow-x-hidden px-3'>
                                 {specialities.map((item)=>{
                                     return(
-                                        <li key={item.name} className='w-[90%] px-[2px] py-[8px] border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>
+                                        <li key={item.name} className='menu-li w-[90%] px-[2px] py-[8px] border-b-[1px] border-b-slate-400/60 font-medium text-slate-500 hover:text-primary'>
                                             <Link href="#" legacyBehavior passHref>
                                                 <p className='hover:translate-x-4 duration-700'>{item.name}</p>
                                             </Link>
@@ -179,11 +179,11 @@ const MenuOne = () => {
                             </ul>
                         </li>
                         <li className="row-span-3">
-                            <p className='text-[13px] font-semibold text-slate-600 mb-2 px-3'>Speciality Clinics</p>
+                            <p className='menu-li font-semibold text-slate-600 mb-2 px-3'>Speciality Clinics</p>
                             <ul className='py-2 w-full h-[60vh] overflow-y-scroll overflow-x-hidden px-3'>
                                 {clinics.map((item)=>{
                                     return(
-                                        <li key={item.name} className='w-[90%] px-[2px] py-[8px] border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>
+                                        <li key={item.name} className='menu-li w-[90%] px-[2px] py-[8px] border-b-[1px] border-b-slate-400/60 font-medium text-slate-500 hover:text-primary'>
                                             <Link href="#" legacyBehavior passHref>
                                                 <p className='hover:translate-x-4 duration-700'>{item.name}</p>
                                             </Link>
@@ -199,7 +199,7 @@ const MenuOne = () => {
     </NavigationMenu>
     <DropdownMenu>
       <DropdownMenuTrigger asChild={true}>
-        <Button variant="transperant" className='btn-hospitals bg-transparent text-[#fff] h-[30px] text-[13px] font-semibold px-2 border-none hover:bg-[#fff] hover:text-primary rounded border-b-[1px] border-b-slate-400/60'>
+        <Button variant="transperant" className='btn-hospitals bg-transparent text-[#fff] h-[30px] menu-li font-semibold px-2 border-none hover:bg-[#fff] hover:text-primary rounded border-b-[1px] border-b-slate-400/60  max-[576px]:bg-slate-400'>
             Hospitals
             <ChevronDown className="chevronDown relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180" aria-hidden="true" />
         </Button>
@@ -207,13 +207,13 @@ const MenuOne = () => {
       <DropdownMenuContent className="w-56">
         <DropdownMenuGroup>
             <DropdownMenuSub>
-                <DropdownMenuSubTrigger className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>
+                <DropdownMenuSubTrigger className='rounded-none border-b-[1px] border-b-slate-400/60 menu-li font-medium text-slate-500 hover:text-primary'>
                     <span >Bengaluru</span>
                 </DropdownMenuSubTrigger>
                 <DropdownMenuPortal>
-                    <DropdownMenuSubContent className='p-2 ml-2'>
-                        <span className='text-xs font-semibold'>Bengaluru</span>
-                        <div className='grid grid-cols-2 gap-2'>
+                    <DropdownMenuSubContent className='py-2 px-4 ml-2'>
+                        <span className='menu-li font-medium text-primary'>Bengaluru</span>
+                        <div className='grid grid-cols-2 gap-2 mt-2'>
                             <DropdownMenuItem className='sub-menu-item border-b-[1px] border-b-slate-400/60 min-w-[150px] pt-0'>
                                 <span>Doddaballapur</span>
                             </DropdownMenuItem>
@@ -272,15 +272,15 @@ const MenuOne = () => {
                     </DropdownMenuSubContent>
                 </DropdownMenuPortal>
             </DropdownMenuSub>
-            <DropdownMenuItem className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>Bhubaneswar</DropdownMenuItem>
+            <DropdownMenuItem className='rounded-none border-b-[1px] border-b-slate-400/60 menu-li font-medium text-slate-500 hover:text-primary'>Bhubaneswar</DropdownMenuItem>
             <DropdownMenuSub>
-                <DropdownMenuSubTrigger className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>
+                <DropdownMenuSubTrigger className='rounded-none border-b-[1px] border-b-slate-400/60 menu-li font-medium text-slate-500 hover:text-primary'>
                     <span >Delhi - NCR</span>
                 </DropdownMenuSubTrigger>
                 <DropdownMenuPortal>
-                    <DropdownMenuSubContent className='p-2 ml-2'>
-                        <span className='text-xs font-semibold'>Delhi - NCR</span>
-                        <div className='grid grid-cols-1 gap-2'>
+                    <DropdownMenuSubContent className='py-2 px-4 ml-2'>
+                        <span className='menu-li font-medium text-primary'>Delhi - NCR</span>
+                        <div className='grid grid-cols-1 gap-2 mt-2'>
                             <DropdownMenuItem className='sub-menu-item border-b-[1px] border-b-slate-400/60 min-w-[150px] pt-0'>
                                 <span>Delhi</span>
                             </DropdownMenuItem>
@@ -294,16 +294,16 @@ const MenuOne = () => {
                     </DropdownMenuSubContent>
                 </DropdownMenuPortal>
             </DropdownMenuSub>
-            <DropdownMenuItem className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>Goa</DropdownMenuItem>
-            <DropdownMenuItem className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>Jaipur</DropdownMenuItem>
+            <DropdownMenuItem className='rounded-none border-b-[1px] border-b-slate-400/60 menu-li font-medium text-slate-500 hover:text-primary'>Goa</DropdownMenuItem>
+            <DropdownMenuItem className='rounded-none border-b-[1px] border-b-slate-400/60 menu-li font-medium text-slate-500 hover:text-primary'>Jaipur</DropdownMenuItem>
             <DropdownMenuSub>
-                <DropdownMenuSubTrigger className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>
+                <DropdownMenuSubTrigger className='rounded-none border-b-[1px] border-b-slate-400/60 menu-li font-medium text-slate-500 hover:text-primary'>
                     <span >Kolkata</span>
                 </DropdownMenuSubTrigger>
                 <DropdownMenuPortal>
-                <DropdownMenuSubContent className='p-2 ml-2'>
-                        <span className='text-xs font-semibold'>Kolkata</span>
-                        <div className='grid grid-cols-1 gap-2'>
+                <DropdownMenuSubContent className='py-2 px-4 ml-2'>
+                        <span className='menu-li font-medium text-primary'>Kolkata</span>
+                        <div className='grid grid-cols-1 gap-2 mt-2'>
                             <DropdownMenuItem className='sub-menu-item border-b-[1px] border-b-slate-400/60 min-w-[150px] pt-0'>
                                 <span>Broadway</span>
                             </DropdownMenuItem>
@@ -320,18 +320,18 @@ const MenuOne = () => {
                     </DropdownMenuSubContent>
                 </DropdownMenuPortal>
             </DropdownMenuSub>
-            <DropdownMenuItem className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>Mangaluru</DropdownMenuItem>
-            <DropdownMenuItem className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>Mysuru</DropdownMenuItem>
-            <DropdownMenuItem className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>Patiala</DropdownMenuItem>
+            <DropdownMenuItem className='rounded-none border-b-[1px] border-b-slate-400/60 menu-li font-medium text-slate-500 hover:text-primary'>Mangaluru</DropdownMenuItem>
+            <DropdownMenuItem className='rounded-none border-b-[1px] border-b-slate-400/60 menu-li font-medium text-slate-500 hover:text-primary'>Mysuru</DropdownMenuItem>
+            <DropdownMenuItem className='rounded-none border-b-[1px] border-b-slate-400/60 menu-li font-medium text-slate-500 hover:text-primary'>Patiala</DropdownMenuItem>
             <DropdownMenuSub>
-                <DropdownMenuSubTrigger className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>
+                <DropdownMenuSubTrigger className='rounded-none border-b-[1px] border-b-slate-400/60 menu-li font-medium text-slate-500 hover:text-primary'>
                     <span >Pune</span>
                 </DropdownMenuSubTrigger>
                 <DropdownMenuPortal>
-                    <DropdownMenuSubContent className='p-2 ml-2'>
-                        <span className='text-xs font-semibold'>Pune</span>
-                        <div className='grid grid-cols-1 gap-2'>
-                            <DropdownMenuItem className='sub-menu-item border-b-[1px] border-b-slate-400/60 min-w-[150px] pt-0'>
+                    <DropdownMenuSubContent className='py-2 px-4 ml-2'>
+                        <span className='menu-li font-medium text-primary'>Pune</span>
+                        <div className='grid grid-cols-1 gap-2 mt-2'>
+                            <DropdownMenuItem className='sub-menu-item border-b-[1px] border-b-slate-400/60 min-w-[150px] pt-0 '>
                                 <span>Baner</span>
                             </DropdownMenuItem>
                             <DropdownMenuItem className='sub-menu-item min-w-[150px] pt-0'>
@@ -341,13 +341,13 @@ const MenuOne = () => {
                     </DropdownMenuSubContent>
                 </DropdownMenuPortal>
             </DropdownMenuSub>
-            <DropdownMenuItem className='rounded-none border-b-[1px] border-b-slate-400/60 text-[13px] font-medium text-slate-500 hover:text-primary'>Salem</DropdownMenuItem>
-            <DropdownMenuItem className='rounded-none text-[13px] font-medium text-slate-500 hover:text-primary'>Vijayawada</DropdownMenuItem>
+            <DropdownMenuItem className='rounded-none border-b-[1px] border-b-slate-400/60 menu-li font-medium text-slate-500 hover:text-primary'>Salem</DropdownMenuItem>
+            <DropdownMenuItem className='rounded-none menu-li font-medium text-slate-500 hover:text-primary'>Vijayawada</DropdownMenuItem>
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
-    <Link href="#" className='bg-transparent text-[#fff] text-[13px] font-semibold hover:bg-[#ffffff] hover:text-primary px-[8px] py-[5px] h-[30px] rounded'>Doctors</Link>
-    <Link href="#" className='bg-transparent text-[#fff] text-[13px] font-semibold hover:bg-[#ffffff] hover:text-primary px-[8px] py-[5px] h-[30px] rounded'>International Patients</Link>
+    <Link href="#" className='max-[767px]:hidden bg-transparent text-[#fff] menu-li font-semibold hover:bg-[#ffffff] hover:text-primary px-[8px] py-[5px] h-[30px] rounded'>Doctors</Link>
+    <Link href="#" className='max-[767px]:hidden bg-transparent text-[#fff] menu-li font-semibold hover:bg-[#ffffff] hover:text-primary px-[8px] py-[5px] h-[30px] rounded'>International Patients</Link>
     </>
   )
 }

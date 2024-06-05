@@ -131,3 +131,61 @@
   .sub-menu-item{
     color: text-primary;
   }
+  .hospitals-menu-card{
+    width: 1100px;
+  }
+  .menu-li{
+    font-size: 13px;
+  }
+  @media only screen and (max-width: 1400px) and (min-width: 1280px) {
+    .hospitals-menu-card{
+      width: 900px;
+    }
+  }
+  @media only screen and (max-width: 1279px) and (min-width: 1024px) {
+    .hospitals-menu-card{
+      width: 550px;
+    }
+    .menu-li{
+      font-size: 11px;
+    }
+  }
+  @media only screen and (max-width: 1023px) and (min-width: 768px) {
+    .hospitals-menu-card{
+      width: 450px;
+    }
+    .menu-li{
+      font-size: 11px;
+    }
+  }
+  @media only screen and (max-width: 767px){
+    .menuOne{
+      display: none;
+    }
+  }
+  @media screen and (max-width:575px) {
+    .nav-bar{
+      background: #fff;
+      width: 100%;
+    }
+    .navbar-sec1{
+      background: rgb(2,78,160);
+      background: linear-gradient(90deg, rgba(2,78,160,1) 0%, rgba(0,183,172,1) 100%);
+      width: 100%;
+    }
+    .btn-appoinment{
+      background:#fff;
+      border:1px solid var(--primary)
+    }
+  }
+  /* footer */
+  /* text-[#f4f7fd80] text-[15px] leading-[38px] font-medium */
+  .footer-list-item{
+    color: #f4f7fd80;
+    font-size: 15px;
+    line-height: 38px;
+    font-weight: 500;
+  }
+  .footer-list-item-2{
+    color: #fff;
+  }

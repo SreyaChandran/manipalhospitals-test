@@ -17,6 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="googlebot" content="noindex,nofollow" />
+      </head>
       <body className={inter.className}>
         <main className="flex min-h-screen flex-col items-start justify-between bg-white min-w-screen 2xl:max-w-[1480px] mx-auto">
             <Header />
