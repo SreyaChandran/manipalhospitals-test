@@ -213,7 +213,7 @@ const MenuOne = () => {
                 <DropdownMenuPortal>
                     <DropdownMenuSubContent className='py-2 px-4 ml-2'>
                         <span className='menu-li font-medium text-primary'>Bengaluru</span>
-                        <div className='grid grid-cols-2 gap-2 mt-2'>
+                        <div className='grid grid-col-1 md:grid-cols-2 gap-2 mt-2'>
                             <DropdownMenuItem className='sub-menu-item border-b-[1px] border-b-slate-400/60 min-w-[150px] pt-0'>
                                 <span>Doddaballapur</span>
                             </DropdownMenuItem>
@@ -245,7 +245,7 @@ const MenuOne = () => {
                                 <span>Yeshwanthpur</span>
                             </DropdownMenuItem>
                         </div>
-                        <div className='flex flex-row items-center justify-between mt-4 gap-4'>
+                        <div className='flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between mt-4 gap-4'>
                             <div className='border-[1px] border-primary rounded-sm p-2'>
                                 <DropdownMenuItem className='sub-menu-item p-[2px]'>
                                     <span>Clinic</span>
