@@ -77,10 +77,10 @@
     transition: .5s ease all;
     font-size: 13px;
   }
-  .btn-lab-report:hover{
+  .btn-lab-report:hover, .icon-menu-item:hover{
     background: rgb(2,78,160);
     background: linear-gradient(90deg, rgba(2,78,160,1) 0%, rgba(0,183,172,1) 100%);
-    color: #fff;
+    color: #fff !important;
   }
   .btn-appoinment{
     background: rgb(2,78,160);
