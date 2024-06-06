@@ -9,13 +9,13 @@ const Footer = () => {
   return (
     <div className='w-full flex flex-col items-center'>
       <div className='w-full max-w-[1440px] 2xl:w-[1440px] mx-auto h-full bg-black min-h-10 py-10'>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4  gap-20 w-full max-w-[1300px] 2xl:w-[1300px] mx-auto px-4 md:px-4 lg:px-10 xl:px-16 2xl:px-20'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4  gap-20 w-full max-w-[1300px] 2xl:w-[1300px] mx-auto px-2 md:px-4 lg:px-10 xl:px-16 2xl:px-20'>
           <FooterCol1 />
           <FooterCol2 />
           <FooterCol4 />
           <FooterCol3 />
         </div>
-        <div className='w-full flex flex-row items-center justify-center gap-2 bg-[#00b7ac] px-4 py-4 flex-wrap'>
+        <div className='w-full flex flex-row items-center justify-center gap-2 bg-[#00b7ac] px-2 md:px-4 lg:px-10 xl:px-16 2xl:px-20 py-4 flex-wrap'>
           <div className='h-[20px] border-r-2 border-r-white flex items-center'>
               <Link href="#"><p className='footer-list-item-2 px-2 md:px-2 text-[10px] md:text-sm font-medium'>BENGALURU</p></Link>
           </div>
@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
         </div>
         <hr className='bg-white h-[2px] min-[600px]:hidden'/>
-        <div className='w-full flex flex-row items-center justify-center gap-2 bg-[#00b7ac] px-4 py-4 flex-wrap'>
+        <div className='w-full flex flex-row items-center justify-center gap-2 bg-[#00b7ac] px-2 md:px-4 lg:px-10 xl:px-16 2xl:px-20 py-4 flex-wrap'>
           <div className='h-[20px] flex items-center border-r-2 border-r-white'>
               <Link href="#"><p className='footer-list-item-2 px-2 md:px-8 text-[10px] md:text-sm font-medium'>PUNE</p></Link>
           </div>

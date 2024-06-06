@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <div className='h-[120px] w-full flex flex-col items-center gap-0 justify-between fixed top-0 left-0'>
         <div className='w-full max-w-[1440px] 2xl:w-[1440px] mx-auto bg-white flex-grow'>
-        <div className='navbar-sec1 header-top px-4 md:px-4 lg:px-10 xl:px-16 2xl:px-20 w-full max-w-[1300px] 2xl:w-[1300px] mx-auto h-full flex flex-row items-center justify-between'>
+        <div className='navbar-sec1 header-top px-2 md:px-4 lg:px-10 xl:px-16 2xl:px-20 w-full max-w-[1300px] 2xl:w-[1300px] mx-auto h-full flex flex-row items-center justify-between'>
           <div className='w-[240px] max-[767px]:w-[200px] max-[575px]:hidden'>
             <Image src={logo1} alt="Manipal Hospitals" />
           </div>
@@ -46,7 +46,7 @@ const Header = () => {
         </div>
         </div>
         <div className='nav-bar min-h-[40px] w-full max-w-[1440px] 2xl:w-[1440px] mx-auto border-b-[3px] border-b-primary'>
-          <div className='w-full max-w-[1300px] 2xl:w-[1300px] mx-auto px-4 md:px-4 lg:px-10 xl:px-16 2xl:px-20 flex items-center justify-center'>
+          <div className='w-full max-w-[1300px] 2xl:w-[1300px] mx-auto px-2 md:px-4 lg:px-10 xl:px-16 2xl:px-20 flex items-center justify-center'>
             <div className='w-[160px] max-[767px]:w-[160px] min-[576px]:hidden'>
               <Image src={logo1} alt="Manipal Hospitals" />
             </div>
