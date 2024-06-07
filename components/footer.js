@@ -8,7 +8,7 @@ import Link from 'next/link'
 const Footer = () => {
   return (
     <div className='w-full flex flex-col items-center'>
-      <div className='w-full max-w-[1440px] 2xl:w-[1440px] mx-auto h-full bg-black min-h-10 py-10'>
+      <div className='w-full bg-black min-h-10 py-10'>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4  gap-20 w-full max-w-[1300px] 2xl:w-[1300px] mx-auto px-2 md:px-4 lg:px-10 xl:px-16 2xl:px-20'>
           <FooterCol1 />
           <FooterCol2 />

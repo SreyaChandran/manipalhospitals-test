@@ -75,7 +75,6 @@
     outline: 0;
     text-decoration: none;
     transition: .5s ease all;
-    font-size: 13px;
   }
   .btn-lab-report:hover, .icon-menu-item:hover{
     background: rgb(2,78,160);
@@ -83,9 +82,10 @@
     color: #fff !important;
   }
   .btn-appoinment{
-    background: rgb(2,78,160);
-    background: linear-gradient(90deg, rgba(2,78,160,1) 0%, rgba(0,183,172,1) 100%);
-    color: #fff;
+    /* border-width: 1.5px; */
+    border: 1px solid #00b7ac;
+    /* background: linear-gradient(90deg, rgba(2,78,160,1) 0%, rgba(0,183,172,1) 100%); */
+    color: rgb(2,78,160);;
     margin: 0;
     outline: 0;
     font-size: 13px;
@@ -137,6 +137,14 @@
   .menu-li{
     font-size: 13px;
   }
+  .icon-white{
+    display: inline !important;
+    width: auto;
+  }
+  .menu-icon-blue{
+    display: none !important;
+    width: 0px;
+  }
   @media only screen and (max-width: 1400px) and (min-width: 1280px) {
     .hospitals-menu-card{
       width: 900px;
@@ -162,12 +170,14 @@
     .menuOne{
       display: none;
     }
+
   }
   @media screen and (max-width:575px) {
     .nav-bar{
       background: #fff;
       width: 100%;
       gap:2px;
+      height: 50px;
     }
     .navbar-sec1{
       background: rgb(2,78,160);
@@ -180,6 +190,14 @@
     }
     .sub-menu-item{
       font-size: 11px;
+    }
+    .icon-white{
+      display: none !important;
+      width: 0px;
+    }
+    .menu-icon-blue{
+      display: inline !important;
+      width: auto;
     }
   }
   /* footer */

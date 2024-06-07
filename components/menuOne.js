@@ -28,6 +28,17 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { ChevronDown } from "lucide-react" 
+import {
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+} from "@/components/ui/popover"
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion" 
 
 const MenuOne = () => {
     const Excellence = [
@@ -147,7 +158,10 @@ const MenuOne = () => {
     <NavigationMenu className='max-[767px]:hidden'>
         <NavigationMenuList>
             <NavigationMenuItem className='my-2'>
-                <NavigationMenuTrigger className='bg-transparent h-[30px] text-[#fff] menu-li font-semibold'>Centre of Excellence</NavigationMenuTrigger>
+                <NavigationMenuTrigger className='bg-transparent h-[30px] text-[#fff] menu-li font-semibold'>
+                    Centre of Excellence
+                    <ChevronDown className="chevronDown relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180" aria-hidden="true" />
+                </NavigationMenuTrigger>
                 <NavigationMenuContent className='pt-2 flex'>
                     <ul className="hospitals-menu-card grid gap-6 p-6 grid-cols-[1fr_1fr_1fr]">
                         <li className="row-span-3">
@@ -198,7 +212,7 @@ const MenuOne = () => {
         </NavigationMenuList>
     </NavigationMenu>
     <DropdownMenu>
-      <DropdownMenuTrigger asChild={true}>
+      <DropdownMenuTrigger asChild={true} className='max-[767px]:hidden'>
         <Button variant="transperant" className='btn-hospitals bg-transparent text-[#fff] h-[30px] menu-li font-semibold px-2 border-none hover:bg-[#fff] hover:text-primary rounded border-b-[1px] border-b-slate-400/60  max-[576px]:bg-slate-400'>
             Hospitals
             <ChevronDown className="chevronDown relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180" aria-hidden="true" />
@@ -346,6 +360,53 @@ const MenuOne = () => {
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
+    <Popover className='min-[768px]:hidden'>
+        <PopoverTrigger className='min-[768px]:hidden border border-primary text-primary px-2 py-1 rounded-full flex flex-row items-center justify-between text-xs font-medium'>
+            Hospitals
+            <ChevronDown className="chevronDown relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180 font-medium" aria-hidden="true" />
+        </PopoverTrigger>
+        <PopoverContent className=''>
+        <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="item-1">
+                <AccordionTrigger>Bengaluru</AccordionTrigger>
+                <AccordionContent>
+                <Link href="https://www.manipalhospitals.com/doddaballapur/" className='text-slate-500 hover:text-primary text-[12px] font-semibold w-full block py-2'>Doddaballapur</Link>
+<Link href="https://www.manipalhospitals.com/hebbal/" className='text-slate-500 hover:text-primary text-[12px] font-semibold w-full block py-2'>Hebbal</Link>
+<Link href="https://www.manipalhospitals.com/jayanagar/" className='text-slate-500 hover:text-primary text-[12px] font-semibold w-full block py-2'>Jayanagar</Link>
+<Link href="https://www.manipalhospitals.com/malleshwaram/" className='text-slate-500 hover:text-primary text-[12px] font-semibold w-full block py-2'>Malleshwaram</Link>
+<Link href="https://www.manipalhospitals.com/millersroad/" className='text-slate-500 hover:text-primary text-[12px] font-semibold w-full block py-2'>Millers Road</Link>
+<Link href="https://www.manipalhospitals.com/oldairportroad/" className='text-slate-500 hover:text-primary text-[12px] font-semibold w-full block py-2'>Old Airport Road</Link>
+<Link href="https://www.manipalhospitals.com/sarjapurroad/" className='text-slate-500 hover:text-primary text-[12px] font-semibold w-full block py-2'>Sarjapur Road</Link>
+<Link href="https://www.manipalhospitals.com/varthurroad/" className='text-slate-500 hover:text-primary text-[12px] font-semibold w-full block py-2'>Varthur Road</Link>
+<Link href="https://www.manipalhospitals.com/whitefield/" className='text-slate-500 hover:text-primary text-[12px] font-semibold w-full block py-2'>Whitefield</Link>
+<Link href="https://www.manipalhospitals.com/yeshwanthpur/" className='text-slate-500 hover:text-primary text-[12px] font-semibold w-full block py-2'>Yeshwanthpur</Link>
+
+                    
+                </AccordionContent>
+            </AccordionItem>
+            <Link href="#" className='text-slate-500 hover:text-primary text-[14px] font-semibold w-full block py-2'>Link</Link>
+            {/* <AccordionItem value="item-2">
+                <AccordionTrigger>Is it styled?</AccordionTrigger>
+                <AccordionContent>
+                Yes. It comes with default styles that matches the other
+                components&apos; aesthetic.
+                </AccordionContent>
+            </AccordionItem> */}
+            <Link href="#" className='text-slate-500 hover:text-primary text-[14px] font-semibold w-full block py-2'>Link</Link>
+            <Link href="#" className='text-slate-500 hover:text-primary text-[14px] font-semibold w-full block py-2'>Link</Link>
+            {/* <AccordionItem value="item-3">
+                <AccordionTrigger>Is it animated?</AccordionTrigger>
+                <AccordionContent>
+                Yes. It&apos;s animated by default, but you can disable it if you
+                prefer.
+                </AccordionContent>
+            </AccordionItem> */}
+            <Link href="#" className='text-slate-500 hover:text-primary text-[14px] font-semibold w-full block py-2'>Link</Link>
+            <Link href="#" className='text-slate-500 hover:text-primary text-[14px] font-semibold w-full block py-2'>Link</Link>
+        </Accordion>
+
+        </PopoverContent>
+    </Popover>
     <Link href="#" className='max-[767px]:hidden bg-transparent text-[#fff] menu-li font-semibold hover:bg-[#ffffff] hover:text-primary px-[8px] py-[5px] h-[30px] rounded'>Doctors</Link>
     <Link href="#" className='max-[767px]:hidden bg-transparent text-[#fff] menu-li font-semibold hover:bg-[#ffffff] hover:text-primary px-[8px] py-[5px] h-[30px] rounded'>International Patients</Link>
     </>
