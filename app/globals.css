@@ -113,27 +113,12 @@
     background: #284797; 
     border-radius: 10px;
   }
-  
-  /* Handle on hover */
-  /* ::-webkit-scrollbar-thumb:hover {
-    background: #b30000; 
-  } */
-  /* .chevronDown{
-    transition: .5s ease all;
-  }
-  .btn-hospitals:hover > .chevronDown{
-    transform: rotate(180deg); 
-    color: #284797;
-  } */
   .sub-menu-item{
     border-radius: 0px;
     font-weight: 500;
     color: slategray;
     font-size: 13px;
   }
-  /* .sub-menu-item{
-    color: text-primary;
-  } */
   .hospitals-menu-card{
     width: 1100px;
   }
@@ -214,3 +199,9 @@
   .footer-list-item-2{
     color: #fff;
   }
+/* Dashboard */
+.banner-bg{
+  background: rgb(2,78,160);
+  background: linear-gradient(90deg, rgba(2,78,160,1) 0%, rgba(0,183,172,1) 100%);
+  width: 100%;
+}

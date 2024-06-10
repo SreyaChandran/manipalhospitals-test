@@ -12,7 +12,7 @@ import MenuThree from '@/components/menuThree'
 
 const Header = () => {
   return (
-    <div className='h-[120px] w-full flex flex-col items-center gap-0 justify-between fixed top-0 left-0'>
+    <div className='h-[120px] w-full max-w-[1660px] mx-auto flex flex-col items-center gap-0 justify-between fixed top-0'>
         <div className='w-full bg-white flex-grow'>
           <div className='navbar-sec1 px-2 md:px-4 lg:px-10 xl:px-16 2xl:px-20 w-full max-w-[1300px] 2xl:w-[1300px] mx-auto h-full flex flex-row items-center justify-between gap-2'>
             <div className='w-[240px] max-[767px]:w-[200px] max-[575px]:hidden'>
@@ -25,10 +25,6 @@ const Header = () => {
               <Link href="#" className='btn-lab-report rounded py-2 px-4 font-semibold md:flex-grow max-[575px]:bg-[#fff] max-[575px]:text-primary text-sm max-[575px]:text-xs max-[575px]:w-[80px] max-[575px]:h-[52px] max-[575px]:p-1 text-center flex items-center justify-center'>
                 Access Lab Reports
               </Link>
-              {/* <Link className="menu-icon-blue" aria-label="Appointment" href="#" className='btn-appoinment font-semibold flex flex-row gap-2 items-center rounded py-2 px-4 max-[991px]:rounded-full max-[991px]:p-2'>
-                <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#284797" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <span className='max-[991px]:hidden'>Appointment</span>
-              </Link> */}
               <Link aria-label="Appointment" href="#" className='btn-appoinment font-semibold flex flex-row gap-2 items-center rounded py-2 px-4 max-[991px]:rounded-full max-[991px]:p-2'>
                 <svg className="icon-white"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 <svg className='menu-icon-blue' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#284797" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
