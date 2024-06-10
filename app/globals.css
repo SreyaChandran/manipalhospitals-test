@@ -68,6 +68,10 @@
     background: rgb(2,78,160);
     background: linear-gradient(90deg, rgba(2,78,160,1) 0%, rgba(0,183,172,1) 100%);
   }
+  .gradient-btn{
+    stroke: rgb(2,78,160);
+    stroke: linear-gradient(90deg, rgba(2,78,160,1) 0%, rgba(0,183,172,1) 100%);
+  }
   .btn-lab-report{
     border: 1px solid #00b7ac;
     color: #284797;
@@ -82,10 +86,9 @@
     color: #fff !important;
   }
   .btn-appoinment{
-    /* border-width: 1.5px; */
-    border: 1px solid #00b7ac;
-    /* background: linear-gradient(90deg, rgba(2,78,160,1) 0%, rgba(0,183,172,1) 100%); */
-    color: rgb(2,78,160);;
+    background: rgb(2,78,160);
+    background: linear-gradient(90deg, rgba(2,78,160,1) 0%, rgba(0,183,172,1) 100%);
+    color: #fff;
     margin: 0;
     outline: 0;
     font-size: 13px;

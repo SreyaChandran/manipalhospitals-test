@@ -14,6 +14,7 @@ import {
 import { Button } from '@/components/ui/button'
 const MenuTwo = () => {
   return (
+    <>
     <NavigationMenu>
         <NavigationMenuList>
             <NavigationMenuItem>
@@ -21,10 +22,14 @@ const MenuTwo = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#284797" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
                     <span className='max-[575px]:hidden'>EN</span>
                 </NavigationMenuTrigger>
-                <NavigationMenuContent>
+                <NavigationMenuContent className='p-2 flex w-[120px]'>
                     <NavigationMenuLink>English</NavigationMenuLink>
                 </NavigationMenuContent>
             </NavigationMenuItem>
+        </NavigationMenuList>
+    </NavigationMenu>
+    <NavigationMenu>
+        <NavigationMenuList>
             <NavigationMenuItem>
                 <Link href="#" legacyBehavior passHref aria-label='podcast'>
                     <NavigationMenuLink aria-label='podcast' className='h-[35px] bg-white text-primary text-[13px] font-semibold font-primary flex flex-row gap-[2px] md:px-[8px] rounded-full items-center'>
@@ -45,6 +50,7 @@ const MenuTwo = () => {
             </NavigationMenuItem>
         </NavigationMenuList>
     </NavigationMenu>
+    </>
   )
 }
 

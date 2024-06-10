@@ -365,50 +365,61 @@ const MenuOne = () => {
             Hospitals
             <ChevronDown className="chevronDown relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180 font-medium" aria-hidden="true" />
         </PopoverTrigger>
-        <PopoverContent className=''>
+        <PopoverContent className='w-[200px] max-h-[300px] overflow-auto'>
         <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
-                <AccordionTrigger>Bengaluru</AccordionTrigger>
+                <AccordionTrigger className='font-medium'>Bengaluru</AccordionTrigger>
                 <AccordionContent>
-                <Link href="https://www.manipalhospitals.com/doddaballapur/" className='text-slate-500 hover:text-primary text-[12px] font-semibold w-full block py-2'>Doddaballapur</Link>
-<Link href="https://www.manipalhospitals.com/hebbal/" className='text-slate-500 hover:text-primary text-[12px] font-semibold w-full block py-2'>Hebbal</Link>
-<Link href="https://www.manipalhospitals.com/jayanagar/" className='text-slate-500 hover:text-primary text-[12px] font-semibold w-full block py-2'>Jayanagar</Link>
-<Link href="https://www.manipalhospitals.com/malleshwaram/" className='text-slate-500 hover:text-primary text-[12px] font-semibold w-full block py-2'>Malleshwaram</Link>
-<Link href="https://www.manipalhospitals.com/millersroad/" className='text-slate-500 hover:text-primary text-[12px] font-semibold w-full block py-2'>Millers Road</Link>
-<Link href="https://www.manipalhospitals.com/oldairportroad/" className='text-slate-500 hover:text-primary text-[12px] font-semibold w-full block py-2'>Old Airport Road</Link>
-<Link href="https://www.manipalhospitals.com/sarjapurroad/" className='text-slate-500 hover:text-primary text-[12px] font-semibold w-full block py-2'>Sarjapur Road</Link>
-<Link href="https://www.manipalhospitals.com/varthurroad/" className='text-slate-500 hover:text-primary text-[12px] font-semibold w-full block py-2'>Varthur Road</Link>
-<Link href="https://www.manipalhospitals.com/whitefield/" className='text-slate-500 hover:text-primary text-[12px] font-semibold w-full block py-2'>Whitefield</Link>
-<Link href="https://www.manipalhospitals.com/yeshwanthpur/" className='text-slate-500 hover:text-primary text-[12px] font-semibold w-full block py-2'>Yeshwanthpur</Link>
-
-                    
+                    <Link href="#" className='text-primary/80 text-[12px] font-medium w-full block py-2'>Doddaballapur</Link>
+                    <Link href="#" className='text-primary/80 text-[12px] font-medium w-full block py-2'>Hebbal</Link>
+                    <Link href="#" className='text-primary/80 text-[12px] font-medium w-full block py-2'>Jayanagar</Link>
+                    <Link href="#" className='text-primary/80 text-[12px] font-medium w-full block py-2'>Malleshwaram</Link>
+                    <Link href="#" className='text-primary/80 text-[12px] font-medium w-full block py-2'>Millers Road</Link>
+                    <Link href="#" className='text-primary/80 text-[12px] font-medium w-full block py-2'>Old Airport Road</Link>
+                    <Link href="#" className='text-primary/80 text-[12px] font-medium w-full block py-2'>Sarjapur Road</Link>
+                    <Link href="#" className='text-primary/80 text-[12px] font-medium w-full block py-2'>Varthur Road</Link>
+                    <Link href="#" className='text-primary/80 text-[12px] font-medium w-full block py-2'>Whitefield</Link>
+                    <Link href="#" className='text-primary/80 text-[12px] font-medium w-full block py-2'>Yeshwanthpur</Link>
                 </AccordionContent>
             </AccordionItem>
-            <Link href="#" className='text-slate-500 hover:text-primary text-[14px] font-semibold w-full block py-2'>Link</Link>
-            {/* <AccordionItem value="item-2">
-                <AccordionTrigger>Is it styled?</AccordionTrigger>
+            <Link href="#" className='text-slate-500 hover:text-primary text-[14px] font-medium w-full block py-2'>Bhubaneswar</Link>
+            <AccordionItem value="item-2">
+                <AccordionTrigger className='font-medium'>Delhi - NCR</AccordionTrigger>
                 <AccordionContent>
-                Yes. It comes with default styles that matches the other
-                components&apos; aesthetic.
+                    <Link href="#" className='text-primary/80 text-[12px] font-medium w-full block py-2'>Delhi</Link>
+                    <Link href="#" className='text-primary/80 text-[12px] font-medium w-full block py-2'>Ghaziabad</Link>
+                    <Link href="#" className='text-primary/80 text-[12px] font-medium w-full block py-2'>Gurugram</Link>
                 </AccordionContent>
-            </AccordionItem> */}
-            <Link href="#" className='text-slate-500 hover:text-primary text-[14px] font-semibold w-full block py-2'>Link</Link>
-            <Link href="#" className='text-slate-500 hover:text-primary text-[14px] font-semibold w-full block py-2'>Link</Link>
-            {/* <AccordionItem value="item-3">
-                <AccordionTrigger>Is it animated?</AccordionTrigger>
+            </AccordionItem>
+            <Link href="#" className='text-slate-500 hover:text-primary text-[14px] font-medium w-full block py-2'>Goa</Link>
+            <Link href="#" className='text-slate-500 hover:text-primary text-[14px] font-medium w-full block py-2'>Jaipur</Link>
+            <AccordionItem value="item-3">
+                <AccordionTrigger className='font-medium'>Kolkata</AccordionTrigger>
                 <AccordionContent>
-                Yes. It&apos;s animated by default, but you can disable it if you
-                prefer.
+                    <Link href="#" className='text-primary/80 text-[12px] font-medium w-full block py-2'>Broadway</Link>
+                    <Link href="#" className='text-primary/80 text-[12px] font-medium w-full block py-2'>Dachuria</Link>
+                    <Link href="#" className='text-primary/80 text-[12px] font-medium w-full block py-2'>Mukundapur</Link>
+                    <Link href="#" className='text-primary/80 text-[12px] font-medium w-full block py-2'>Salt Lake</Link>                    
                 </AccordionContent>
-            </AccordionItem> */}
-            <Link href="#" className='text-slate-500 hover:text-primary text-[14px] font-semibold w-full block py-2'>Link</Link>
-            <Link href="#" className='text-slate-500 hover:text-primary text-[14px] font-semibold w-full block py-2'>Link</Link>
+            </AccordionItem>
+            <Link href="#" className='text-slate-500 hover:text-primary text-[14px] font-medium w-full block py-2'>Mangaluru</Link>
+            <Link href="#" className='text-slate-500 hover:text-primary text-[14px] font-medium w-full block py-2'>Mysuru</Link>
+            <Link href="#" className='text-slate-500 hover:text-primary text-[14px] font-medium w-full block py-2'>Patiala</Link>
+            <AccordionItem value="item-4">
+                <AccordionTrigger className='font-medium'>Pune</AccordionTrigger>
+                <AccordionContent>
+                    <Link href="#" className='text-primary/80 text-[12px] font-medium w-full block py-2'>Lanes</Link>
+                    <Link href="#" className='text-primary/80 text-[12px] font-medium w-full block py-2'>Kharadi</Link>
+                </AccordionContent>
+            </AccordionItem>
+            <Link href="#" className='text-slate-500 hover:text-primary text-[14px] font-medium w-full block py-2'>Selam</Link>
+            <Link href="#" className='text-slate-500 hover:text-primary text-[14px] font-medium w-full block py-2'>Vijayaada</Link>
         </Accordion>
 
         </PopoverContent>
     </Popover>
-    <Link href="#" className='max-[767px]:hidden bg-transparent text-[#fff] menu-li font-semibold hover:bg-[#ffffff] hover:text-primary px-[8px] py-[5px] h-[30px] rounded'>Doctors</Link>
-    <Link href="#" className='max-[767px]:hidden bg-transparent text-[#fff] menu-li font-semibold hover:bg-[#ffffff] hover:text-primary px-[8px] py-[5px] h-[30px] rounded'>International Patients</Link>
+    <Link href="#" className='max-[767px]:hidden bg-transparent text-[#fff] menu-li font-medium hover:bg-[#ffffff] hover:text-primary px-[8px] py-[5px] h-[30px] rounded'>Doctors</Link>
+    <Link href="#" className='max-[767px]:hidden bg-transparent text-[#fff] menu-li font-medium hover:bg-[#ffffff] hover:text-primary px-[8px] py-[5px] h-[30px] rounded'>International Patients</Link>
     </>
   )
 }
