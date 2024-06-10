@@ -57,7 +57,7 @@ const FooterCol1 = () => {
         <Button variant="secondary" className='text-primary w-[200px] bg-[#fff] mb-1'>In-patient Tariff</Button>
         <p className='text-[#fff] text-xl font-semibold mt-4 mb-2'>ACCREDITATIONS</p>
         <div className='flex flex-row item-center justify-start gap-4'>
-            <div className='w-[60px] h-[60px]'>
+            <div className='w-[60px] h-[70px]'>
                 <Image src={cert} alt="Manipal Hospitals" />
             </div>
             <div className='w-[70px] h-[70px]'>
