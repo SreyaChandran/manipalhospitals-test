@@ -7,7 +7,7 @@ import youtube from '@/public/images/youtube.webp'
 import apple from '@/public/images/apple.webp'
 import playstore from '@/public/images/playstore.webp'
 import cert from '@/public/images/cert.webp'
-import nabl from '@/public/images/nabl.webp'
+import nabl from '@/public/images/nabh.png'
 
 
 

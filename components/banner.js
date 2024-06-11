@@ -15,7 +15,7 @@ import CarouselImage2 from '../public/images/carousel-img-2.webp'
 import CarouselImage3 from '../public/images/carousel-img-3.webp'
 import CarouselImage4 from '../public/images/caroudel-img-4.webp'
 import CarouselImage5 from '../public/images/carousel-img-5.webp'
-
+// import carouseImageMin from '../public/images/carousel-img-1-min.webp'
 
 const Banner = () => {
   const plugin = React.useRef(
@@ -32,7 +32,13 @@ const Banner = () => {
       <CarouselContent>
         <CarouselItem key={1}>
             <div>
-              <Image src={CarouselImage1} alt="Manipal Hospitals" className='min-w-[100%] h-auto'/>
+              <Image src={CarouselImage1} 
+                alt="Manipal Hospitals" 
+                className='min-w-[100%] h-auto'
+                layout="responsive"
+                placeholder="blur"
+                blurDataURL="../public/images/carousel-img-1-min.webp"
+                />
             </div>
         </CarouselItem>
         <CarouselItem key={2}>
