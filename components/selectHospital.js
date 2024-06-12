@@ -27,6 +27,7 @@ const SelectHospital = ({hospitals, textVal}) => {
             <Button
                 variant="link"
                 role="combobox"
+                aria-label={textVal}
                 aria-expanded={open}
                 className="no-underline hover:no-underline w-[220px] justify-between bg-transperant active:bg-transparent focus:bg-transparent visited:bg-transparent text-primary font-semibold"
             >
