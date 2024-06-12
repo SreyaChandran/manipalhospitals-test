@@ -25,10 +25,10 @@ const SelectHospital = ({hospitals, textVal}) => {
         <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
             <Button
-                variant="ghost"
+                variant="link"
                 role="combobox"
                 aria-expanded={open}
-                className="justify-between bg-transperant active:bg-transparent focus:bg-transparent visited:bg-transparent text-primary font-semibold"
+                className="no-underline hover:no-underline w-[220px] justify-between bg-transperant active:bg-transparent focus:bg-transparent visited:bg-transparent text-primary font-semibold"
             >
             {value
                 ? hospitals.find((hospital) => hospital.id === value)?.name

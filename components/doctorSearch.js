@@ -41,18 +41,18 @@ const DoctorSearch = () => {
     { id: "doc-id-2791", name: "Dr Chinnu Jomi" }
   ]
   return (
-    <div className='absolute w-[90vw] max-w-[1200px] left-0 right-0 ml-auto mr-auto md:bottom-5 xl:bottom-8 hidden sm:hidden md:grid md:grid-cols-4 items-center justify-center gap-4 border-[1.5px] border-[#00b7ac] py-2 px-6 rounded-md bg-[#ffffffe6]'>
-        <div className='border-r-2 border-r-[#00b7ac] flex items-center justify-center'>
+    <div className='static mt-2 md:mt-0 md:absolute w-[220px] md:w-[90vw] max-w-[1200px] left-0 right-0 ml-auto mr-auto md:bottom-5 xl:bottom-8 flex flex-col gap-2 sm:flex sm:flex-col md:grid md:grid-cols-4 items-center justify-center md:gap-4 border-[1.5px] border-[#00b7ac] py-2 md:px-6 rounded-md bg-[#ffffffe6]'>
+        <div className='border-b-2 border-b-[#00b7ac] md:border-b-0 md:border-r-2 md:border-r-[#00b7ac] flex items-center justify-center'>
           <SelectHospital hospitals={hospitals} textVal="Select Hospital" />
         </div>
-        <div className='border-r-2 border-r-[#00b7ac] flex items-center justify-center'>
+        <div className='border-b-2 border-b-[#00b7ac] md:border-b-0 md:border-r-2 md:border-r-[#00b7ac] flex items-center justify-center'>
           <SelectHospital hospitals={speciality} textVal="Select speciality" />
         </div>
-        <div className='border-r-2 border-r-[#00b7ac] flex items-center justify-center'>
+        <div className='border-b-2 border-b-[#00b7ac] md:border-b-0 md:border-r-2 md:border-r-[#00b7ac] flex items-center justify-center'>
           <SelectHospital hospitals={doctors} textVal="Select Doctors" />
         </div>
         <div className='flex items-center justify-center'>
-          <Button className='btn-appoinment flex items-center justify-center gap-2 text-[#fff] px-8'>
+          <Button className='btn-primary md:btn-appoinment flex items-center justify-center gap-2 text-[#fff] px-8'>
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
             Submit
           </Button>
