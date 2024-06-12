@@ -22,7 +22,7 @@ const Banner = () => {
     Autoplay({ delay: 3000, stopOnInteraction: true })
   )
   return (
-    <div className='w-full h-fit banner-bg'>
+    <div className='w-full h-fit banner-bg z-0'>
       <Carousel
       plugins={[plugin.current]}
       className="w-full h-max"

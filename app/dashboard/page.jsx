@@ -1,10 +1,11 @@
 import React from 'react'
 import Banner from '@/components/banner'
-
+import DoctorSearch from '@/components/doctorSearch'
 const Dashboard = () => {
   return (
-    <div className="flex w-full min-h-[500px] mt-[120px]">
-      <Banner />
+    <div className="relative flex flex-col w-full mt-[120px] z-[0]">
+      <Banner/>
+      <DoctorSearch />
     </div>
   )
 }
