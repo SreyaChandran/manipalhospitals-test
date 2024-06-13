@@ -18,9 +18,9 @@ import {
 } from "@/components/ui/popover"
 
 
-const SelectHospital = ({hospitals, textVal}) => {
+const SelectHospital = ({hospitals, textVal, name="name", value, setValue}) => {
     const [open, setOpen] = useState(false)
-    const [value, setValue] = useState("")
+    // const [value, setValue] = useState("")
     return (
         <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
@@ -32,7 +32,8 @@ const SelectHospital = ({hospitals, textVal}) => {
                 className="no-underline hover:no-underline w-[220px] justify-between bg-transperant active:bg-transparent focus:bg-transparent visited:bg-transparent text-primary font-semibold"
             >
             {value
-                ? hospitals.find((hospital) => hospital.id === value)?.name
+                ? value
+                // ? hospitals.find((hospital) => hospital[name] === value)?.name
                 : textVal}
           <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
@@ -41,12 +42,12 @@ const SelectHospital = ({hospitals, textVal}) => {
         <Command>
           <CommandInput placeholder={textVal}/>
           <CommandList>
-            <CommandEmpty>No hospital found.</CommandEmpty>
+            <CommandEmpty>No data found.</CommandEmpty>
             <CommandGroup>
               {hospitals.map((hospital) => (
                 <CommandItem
                   key={hospital.id}
-                  value={hospital.name}
+                  value={hospital[name]}
                   onSelect={(currentValue) => {
                     setValue(currentValue === value ? "" : currentValue)
                     setOpen(false)
@@ -58,7 +59,7 @@ const SelectHospital = ({hospitals, textVal}) => {
                       value === hospital.id ? "opacity-100" : "opacity-0"
                     )}
                   />
-                  {hospital.name}
+                  {hospital[name]}
                 </CommandItem>
               ))}
             </CommandGroup>

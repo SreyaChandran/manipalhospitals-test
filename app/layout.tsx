@@ -21,8 +21,8 @@ export default function RootLayout({
         <meta name="googlebot" content="noindex,nofollow" />
       </head>
       <body className={inter.className}>
+        <Header/>
         <main className="flex min-h-screen flex-col items-start justify-between bg-white w-full max-w-[1660px] m-auto">
-            <Header/>
             <section className="flex flex-grow w-full flex-row gap-4">
               <div className="w-full overflow-x-hidden bg-white pb-10">{children}</div>
             </section>

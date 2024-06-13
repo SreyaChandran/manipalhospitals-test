@@ -12,7 +12,7 @@ import MenuThree from '@/components/menuThree'
 
 const Header = () => {
   return (
-    <div className='h-[120px] w-full max-w-[1660px] mx-auto flex flex-col items-center gap-0 justify-between fixed top-0'>
+    <div className='h-[120px] w-full max-w-[1660px] mx-auto flex flex-col items-center gap-0 justify-between sticky top-0 z-20'>
         <div className='w-full bg-white flex-grow'>
           <div className='navbar-sec1 px-2 md:px-4 lg:px-10 xl:px-16 2xl:px-20 w-full max-w-[1300px] 2xl:w-[1300px] mx-auto h-full flex flex-row items-center justify-between gap-2'>
             <div className='w-[240px] max-[767px]:w-[200px] max-[575px]:hidden'>
