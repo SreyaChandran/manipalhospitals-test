@@ -22,7 +22,8 @@ import { ChevronRight } from 'lucide-react'
 const MethodToMiracle = () => {
   return (
     // <div className='h-20 w-20 bg-[#05aba5]'>
-      <Tabs defaultValue="tab1" className="w-full flex flex-col lg:flex-row h-auto">
+      <Tabs defaultValue="tab1" className="w-full flex flex-col lg:flex-row lg:flex-wrap h-auto">
+      {/* <Tabs defaultValue="tab1"> */}
       <TabsList className="overflow-auto lg:overflow-hidden flex flex-row lg:flex-col max-w-[100%] lg:w-[500px] xl:w-[600px] 2xl:w-[700px] p-4  bg-[#05aba5] rounded-none gap-4">
         <p className='hidden lg:flex flex-row gap-2 text-[28px] xl:text-[32px] 2xl:text-[39px] font-[800] text-white items-center justify-center w-full'>
           Method to Miracle
@@ -44,37 +45,63 @@ const MethodToMiracle = () => {
           <ChevronRight className='hidden lg:inline'/>
         </TabsTrigger>
       </TabsList>
-      <TabsContent value="tab1" className='flex-grow flex items-center bg-black m-0'>
+      <div className='flex-grow bg-black'>
+      <TabsContent value="tab1" className='flex items-center bg-black m-0'>
         <video width="100%" height="auto" controls>
-          {/* <source src="" type="video/mp4"> */}
-          {/* <source src="" type="video/ogg"> */}
         Your browser does not support the video tag.
         </video>
-
       </TabsContent>
-      <TabsContent value="tab2">
-        <Card>
-          <CardHeader>
-            <CardTitle>Password</CardTitle>
-            <CardDescription>
-              Change your password here. 
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-2">
-            <div className="space-y-1">
-              <label htmlFor="current">Current password</label>
-              <input id="current" type="password" />
-            </div>
-            <div className="space-y-1">
-              <label htmlFor="new">New password</label>
-              <input id="new" type="password" />
-            </div>
-          </CardContent>
-          <CardFooter>
-            <Button>Save password</Button>
-          </CardFooter>
-        </Card>
+      <TabsContent value="tab2" className='flex items-center bg-black m-0'>
+      <video width="100%" height="auto" controls>
+        Your browser does not support the video tag.
+        </video>
       </TabsContent>
+      
+      <TabsContent value="tab3" className='flex items-center bg-black m-0'>
+      <video width="100%" height="auto" controls>
+        Your browser does not support the video tag.
+        </video>
+      </TabsContent>
+      <TabsContent value="tab4" className='flex items-center bg-black m-0'>
+      <video width="100%" height="auto" controls>
+        Your browser does not support the video tag.
+        </video>
+      </TabsContent>
+      </div>
+      <div className='block w-full items-center py-4 px-8 md:py-8 md:px-16 max-w-[1660px]'>
+        <div className='w-full gradient-bg-2 mx-auto rounded px-4 py-4 md:py-16 md:px-24'>
+          <TabsContent value="tab1" className='flex flex-col gap-2 md:gap-4 '>
+            <p className='text-white text-md text-center leading-[33px] font-medium pb-6'>
+              The Orthopaedic Department at Manipal Hospitals provides an unparalleled assessment and treatment with both medical and surgical practice of the entire musculoskeletal system including bones, joints, muscles, nerves, ligaments and tendons - everything that makes you move and be active.
+            </p>
+            <p className='text-[28px] xl:text-[32px] 2xl:text-[39px] font-[800] text-white text-center '>ORTHOPAEDICS</p>
+            <hr className='bg-white text-white h-[2px] border-0' />
+            <Button variant="secondary" className='bg-white w-fit mx-auto text-primary font-bold'>Know More</Button>
+          </TabsContent>
+          <TabsContent value="tab2" className='flex flex-col gap-2 md:gap-4 '>
+            <p class="text-white text-md text-center leading-[33px] font-medium pb-6">
+              The premier practice of the Urology Department at Manipal Hospitals excels in diagnosing and treating problems involving the female and male urinary tract. One of the top-ranked departments in the country, it is specialized in all areas like treating kidney stones, addressing incontinence, treating cancer to restoring fertility.
+            </p>
+            <p class="text-[28px] xl:text-[32px] 2xl:text-[39px] font-[800] text-white text-center">
+              Urology
+            </p>
+            <hr className='bg-white text-white h-[2px] border-0' />
+            <Button variant="secondary" className='bg-white w-fit mx-auto text-primary font-bold'>Know More</Button>
+          </TabsContent>
+          <TabsContent value="tab3" className='flex flex-col gap-2 md:gap-4 '>
+            <p className='text-white text-md text-center leading-[33px] font-medium pb-6'>The Orthopedic Department at Manipal Hospitals provides an unparalleled assessment and treatment with both medical and surgical practice of the entire musculoskeletal system including bones, joints, muscles, nerves, ligaments and tendons - everything that makes you move and be active.</p>
+            <p className='text-[28px] xl:text-[32px] 2xl:text-[39px] font-[800] text-white text-center '>Orthopaedics</p>
+            <hr className='bg-white text-white h-[2px] border-0' />
+            <Button variant="secondary" className='bg-white w-fit mx-auto text-primary font-bold'>Know More</Button>
+          </TabsContent>
+          <TabsContent value="tab4" className='flex flex-col gap-2 md:gap-4 '>
+            <p className='text-white text-md text-center leading-[33px] font-medium pb-6'>The Department of Plastic &amp; Cosmetic Surgery at Manipal Hospitals is a comprehensive practice for restoring, reconstructing and enhancing the physical attributes of its patients to help them achieve a better quality of life. </p>
+            <p className='text-[28px] xl:text-[32px] 2xl:text-[39px] font-[800] text-white text-center'>Plastic And Cosmetic Surgery</p>
+            <hr className='bg-white text-white h-[2px] border-0' />
+            <Button variant="secondary" className='bg-white w-fit mx-auto text-primary font-bold'>Know More</Button>
+          </TabsContent>
+        </div>
+      </div>
     </Tabs>
 
     // </div>

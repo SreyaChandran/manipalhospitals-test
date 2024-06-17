@@ -40,14 +40,14 @@ const DoctorSearch = () => {
     }
   },[selectedHospital, selectedSpeciality])
   return (
-    <div className='static mt-2 md:mt-0 md:absolute w-[220px] md:w-[90vw] max-w-[1200px] left-0 right-0 ml-auto mr-auto md:bottom-5 xl:bottom-8 flex flex-col gap-2 sm:flex sm:flex-col md:grid md:grid-cols-4 items-center justify-center md:gap-4 border-[1.5px] border-[#00b7ac] py-2 md:px-6 rounded-md bg-[#ffffffe6]'>
-        <div className='border-b-2 border-b-[#00b7ac] md:border-b-0 md:border-r-2 md:border-r-[#00b7ac] flex items-center justify-center'>
+    <div className='static mb-2 md:mb-0 mt-2 md:mt-0 md:absolute w-[90vw] md:w-[90vw] max-w-[1200px] left-0 right-0 ml-auto mr-auto md:bottom-5 xl:bottom-8 flex flex-col gap-2 sm:flex sm:flex-col md:grid md:grid-cols-4 items-center justify-center md:gap-4 border-[1.5px] border-[#00b7ac] py-2 md:px-6 rounded-md bg-[#ffffffe6]'>
+        <div className='border-b-2 w-full border-b-slate-300 md:border-b-0 md:border-r-2 md:border-r-[#00b7ac] flex items-center justify-center'>
           <SelectHospital hospitals={hospitals} textVal="Select Hospital"  name='hospitalName' value={selectedHospital} setValue={setSelectedHospital} />
         </div>
-        <div className='border-b-2 border-b-[#00b7ac] md:border-b-0 md:border-r-2 md:border-r-[#00b7ac] flex items-center justify-center'>
+        <div className='border-b-2 w-full border-b-slate-300 md:border-b-0 md:border-r-2 md:border-r-[#00b7ac] flex items-center justify-center'>
           <SelectHospital hospitals={speciality} textVal="Select speciality" name='specialityName' value={selectedSpeciality} setValue={setSelectedSpeciality} />
         </div>
-        <div className='border-b-2 border-b-[#00b7ac] md:border-b-0 md:border-r-2 md:border-r-[#00b7ac] flex items-center justify-center'>
+        <div className='border-b-2 w-full border-b-slate-300 md:border-b-0 md:border-r-2 md:border-r-[#00b7ac] flex items-center justify-center'>
           <SelectHospital hospitals={doctors} textVal="Select Doctors" name='doctorName' value={selectedDoctor} setValue={setSelectedDoctor} />
         </div>
         <div className='flex items-center justify-center'>

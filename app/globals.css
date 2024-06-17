@@ -68,6 +68,10 @@
     background: rgb(2,78,160);
     background: linear-gradient(90deg, rgba(2,78,160,1) 0%, rgba(0,183,172,1) 100%);
   }
+  .gradient-bg-2{
+    background: rgb(2,78,160);
+    background: linear-gradient(280deg, rgba(2,78,160,1) 0%, rgba(0,183,172,0.7525603991596639) 100%);
+  }
   .gradient-btn{
     stroke: rgb(2,78,160);
     stroke: linear-gradient(90deg, rgba(2,78,160,1) 0%, rgba(0,183,172,1) 100%);
@@ -205,4 +209,37 @@
   background: rgb(2,78,160);
   background: linear-gradient(90deg, rgba(2,78,160,1) 0%, rgba(0,183,172,1) 100%);
   width: 100%;
+}
+/* HumanCareExperts */
+.humenCare-p1{
+  font-size: 12px;
+  line-height: 23px;
+  color: #00000080;
+  margin: .75em 0 1.5em;
+  padding: 0;
+}
+.humenCare-p2{
+  font-size: 30px;
+  color: #fff;
+  line-height: 47px;
+  font-weight: 700;
+}
+.humenCare-p2::before{
+  content: '';
+  display: block;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: -20px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 90px;
+  background: rgb(2,78,160);
+  background: linear-gradient(90deg, rgba(2,78,160,1) 0%, rgba(0,183,172,1) 100%);
+}
+.humenCare-p3{
+  font-size: 20px;
+  color: #fff;
+  line-height: 47px;
+  font-weight: 700;
 }
