@@ -13,7 +13,7 @@ export const getSpecialitiesData = async () => {
     console.log("specialities", data);
     return data;
 };
-export const getDoctorsData = async (hospital:string, speciality:string) => {
+export const getDoctorsData = async (hospital:string="", speciality:string="") => {
     const data = await db.select().from(doctors).where(sql `${doctors.hospitalUnitName} = ${hospital} and  ${doctors.specialityName} =  ${speciality}`);
     console.log("doctors", data);
     return data;
