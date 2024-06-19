@@ -243,3 +243,11 @@
   line-height: 47px;
   font-weight: 700;
 }
+.btn-tab{
+  background: transparent;
+  border:1px solid #fff;
+}
+.btn-tab:active{
+  background: #fff !important; 
+  border:none;
+}

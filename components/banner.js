@@ -38,27 +38,28 @@ const Banner = () => {
                 layout="responsive"
                 placeholder="blur"
                 blurDataURL="../public/images/carousel-img-1-min.webp"
+                priority
                 />
             </div>
         </CarouselItem>
         <CarouselItem key={2}>
           <div>
-            <Image src={CarouselImage2} alt="Manipal Hospitals" className='min-w-[100%] h-auto'/>
+            <Image src={CarouselImage2} alt="Manipal Hospitals" className='min-w-[100%] h-auto' priority/>
           </div>
         </CarouselItem>
         <CarouselItem key={3}>
           <div>
-            <Image src={CarouselImage3} alt="Manipal Hospitals" className='min-w-[100%] h-auto'/>
+            <Image src={CarouselImage3} alt="Manipal Hospitals" className='min-w-[100%] h-auto' priority/>
           </div>
         </CarouselItem>
         <CarouselItem key={4}>
           <div>
-            <Image src={CarouselImage4} alt="Manipal Hospitals" className='min-w-[100%] h-auto'/>
+            <Image src={CarouselImage4} alt="Manipal Hospitals" className='min-w-[100%] h-auto' priority/>
           </div>
         </CarouselItem>
         <CarouselItem key={5}>
           <div>
-            <Image src={CarouselImage5} alt="Manipal Hospitals" className='min-w-[100%] h-auto'/>
+            <Image src={CarouselImage5} alt="Manipal Hospitals" className='min-w-[100%] h-auto' priority/>
           </div>
         </CarouselItem>
       </CarouselContent>
