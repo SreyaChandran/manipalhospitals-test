@@ -19,7 +19,7 @@ import CarouselImage5 from '../public/images/carousel-img-5.webp'
 
 const Banner = () => {
   const plugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: true })
+    Autoplay({ delay: 5000, stopOnInteraction: true })
   )
   return (
     <div className='w-full h-fit min-h-12 banner-bg'>
@@ -44,22 +44,22 @@ const Banner = () => {
         </CarouselItem>
         <CarouselItem key={2}>
           <div>
-            <Image src={CarouselImage2} alt="Manipal Hospitals" className='min-w-[100%] h-auto' priority/>
+            <Image src={CarouselImage2} alt="Manipal Hospitals" className='min-w-[100%] h-auto' priority='false'/>
           </div>
         </CarouselItem>
         <CarouselItem key={3}>
           <div>
-            <Image src={CarouselImage3} alt="Manipal Hospitals" className='min-w-[100%] h-auto' priority/>
+            <Image src={CarouselImage3} alt="Manipal Hospitals" className='min-w-[100%] h-auto' priority='false'/>
           </div>
         </CarouselItem>
         <CarouselItem key={4}>
           <div>
-            <Image src={CarouselImage4} alt="Manipal Hospitals" className='min-w-[100%] h-auto' priority/>
+            <Image src={CarouselImage4} alt="Manipal Hospitals" className='min-w-[100%] h-auto' priority='false'/>
           </div>
         </CarouselItem>
         <CarouselItem key={5}>
           <div>
-            <Image src={CarouselImage5} alt="Manipal Hospitals" className='min-w-[100%] h-auto' priority/>
+            <Image src={CarouselImage5} alt="Manipal Hospitals" className='min-w-[100%] h-auto' priority='false'/>
           </div>
         </CarouselItem>
       </CarouselContent>
