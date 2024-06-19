@@ -38,7 +38,7 @@ const Banner = () => {
                 layout="responsive"
                 placeholder="blur"
                 blurDataURL="../public/images/carousel-img-1-min.webp"
-                priority
+                priority="false"
                 />
             </div>
         </CarouselItem>
