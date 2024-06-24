@@ -16,30 +16,58 @@ import {
 } from "@/components/ui/carousel"
 import LifeCarouselCard from '@/components/lifeCarouselCard'
 import TestimonialCard from '@/components/testimonialCard'
-import carousel1_1 from '../public/images/total-knee-replacement.webp'
-import carousel1_2 from '../public/images/partial-molar-pregnancy-with-hellp-syndrome.webp'
-import carousel1_3 from '../public/images/patients-journey-to-recovery.webp'
-import carousel1_4 from '../public/images/remarkable-orthopedic-surgery.webp'
-import carousel1_5 from '../public/images/what-age-does-scoliosis-typically-develop.webp'
-import carousel2_1 from '../public/images/respiratory-medicine-specialist-in-bangalore.webp'
-import carousel2_2 from '../public/images/different-stages-of-diabetic-retinopathy.webp'
-import carousel2_3 from '../public/images/what-causes-diabetic-retinopathy.webp'
-import carousel3_1 from '../public/images/coronary-bypass-surgery.webp'
-import carousel3_2 from '../public/images/how-glaucoma-is-treated.webp'
-import carousel3_3 from '../public/images/lactation-for-new-mothers.webp'
-import carousel3_4 from '../public/images/introduction-to-what-is-ct-scan-computerised-tomography.webp'
-import carousel3_5 from '../public/images/bone-marrow-transplant.webp'
-import carousel4_1 from '../public/images/organ-donation-awareness-event-1.webp'
-import carousel4_2 from '../public/images/kidney-health-awareness-on-world-kidney-day-2023_1.webp'
-import carousel4_3 from '../public/images/early-diagnosis-of-blood-cancer.webp'
-import carousel4_4 from '../public/images/happy-doctors-day-2023.webp'
-import carousel4_5 from '../public/images/cervical-cancer-awareness.webp'
-import carousel5_1 from '../public/images/world-no-tobacco-day.webp'
-import carousel5_2 from '../public/images/celebrating-nurses-day-at-manipal.webp'
-import carousel5_3 from '../public/images/enhancing-healthcare-accessibility.webp'
-import carousel5_4 from '../public/images/internal-medicine-doctors-at-manipal.webp'
-import carousel5_5 from '../public/images/exclusive-senior-care-pathway.webp'
+// import carousel1_1 from 'total-knee-replacement.webp'
+// import carousel1_2 from 'partial-molar-pregnancy-with-hellp-syndrome.webp'
+// import carousel1_3 from 'patients-journey-to-recovery.webp'
+// import carousel1_4 from 'remarkable-orthopedic-surgery.webp'
+// import carousel1_5 from 'what-age-does-scoliosis-typically-develop.webp'
+// import carousel2_1 from 'respiratory-medicine-specialist-in-bangalore.webp'
+// import carousel2_2 from 'different-stages-of-diabetic-retinopathy.webp'
+// import carousel2_3 from 'what-causes-diabetic-retinopathy.webp'
+// import carousel3_1 from 'coronary-bypass-surgery.webp'
+// import carousel3_2 from 'how-glaucoma-is-treated.webp'
+// import carousel3_3 from 'lactation-for-new-mothers.webp'
+// import carousel3_4 from 'introduction-to-what-is-ct-scan-computerised-tomography.webp'
+// import carousel3_5 from 'bone-marrow-transplant.webp'
+// import carousel4_1 from 'organ-donation-awareness-event-1.webp'
+// import carousel4_2 from 'kidney-health-awareness-on-world-kidney-day-2023_1.webp'
+// import carousel4_3 from 'early-diagnosis-of-blood-cancer.webp'
+// import carousel4_4 from 'happy-doctors-day-2023.webp'
+// import carousel4_5 from 'cervical-cancer-awareness.webp'
+// import carousel5_1 from 'world-no-tobacco-day.webp'
+// import carousel5_2 from 'celebrating-nurses-day-at-manipal.webp'
+// import carousel5_3 from 'enhancing-healthcare-accessibility.webp'
+// import carousel5_4 from 'internal-medicine-doctors-at-manipal.webp'
+// import carousel5_5 from 'exclusive-senior-care-pathway.webp'
 const LifeAtAGlance = () => {
+  const carousel1_1 = 'total-knee-replacement.webp';
+  const carousel1_2 = 'partial-molar-pregnancy-with-hellp-syndrome.webp';
+  const carousel1_3 = 'patients-journey-to-recovery.webp';
+  const carousel1_4 = 'remarkable-orthopedic-surgery.webp';
+  const carousel1_5 = 'what-age-does-scoliosis-typically-develop.webp';
+
+  const carousel2_1 = 'respiratory-medicine-specialist-in-bangalore.webp';
+  const carousel2_2 = 'different-stages-of-diabetic-retinopathy.webp';
+  const carousel2_3 = 'what-causes-diabetic-retinopathy.webp';
+
+  const carousel3_1 = 'coronary-bypass-surgery.webp';
+  const carousel3_2 = 'how-glaucoma-is-treated.webp';
+  const carousel3_3 = 'lactation-for-new-mothers.webp';
+  const carousel3_4 = 'introduction-to-what-is-ct-scan-computerised-tomography.webp';
+  const carousel3_5 = 'bone-marrow-transplant.webp';
+
+  const carousel4_1 = 'organ-donation-awareness-event-1.webp';
+  const carousel4_2 = 'kidney-health-awareness-on-world-kidney-day-2023_1.webp';
+  const carousel4_3 = 'early-diagnosis-of-blood-cancer.webp';
+  const carousel4_4 = 'happy-doctors-day-2023.webp';
+  const carousel4_5 = 'cervical-cancer-awareness.webp';
+
+  const carousel5_1 = 'world-no-tobacco-day.webp';
+  const carousel5_2 = 'celebrating-nurses-day-at-manipal.webp';
+  const carousel5_3 = 'enhancing-healthcare-accessibility.webp';
+  const carousel5_4 = 'internal-medicine-doctors-at-manipal.webp';
+  const carousel5_5 = 'exclusive-senior-care-pathway.webp';
+
   const testimonial = [{name:"Ms. K. Lavanya",description:"The services that I receive from Dr.Dharmendra Kumar are excellent. Dr Dharmendra Kumar ensu", link:"#", doctor:"Dr. V Dharmendra Kumar", speciality:"Cancer Care/Oncology", hospital:"Manipal Super Speciality Hospitals-Vijayawada"},
     {name:"Mr. C H Venkata Subba Rao",description:"Dear Manipal, We are happy with the service given by each and every person here.", link:"#", doctor:"Dr. Murali Chekuri", speciality:"Neurology", hospital:"Manipal Super Speciality Hospitals-Vijayawada"},
     {name:"Mr. K. Eswar Sai Ganesh",description:"Myself, Eswar Sai Ganesh and I have been admitted here 6 years ago. To date, I am honoured ", link:"#", doctor:"Dr. G Krishna Reddy", speciality:"Cancer Care/Oncology", hospital:"Manipal Super Speciality Hospitals-Vijayawada"},

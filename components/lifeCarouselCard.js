@@ -18,11 +18,13 @@ const LifeCarouselCard = ({image, titleText, decText, srcText="https://www.youtu
   return (
     <>
     <div className='flex flex-row items-center justify-between aspect-video w-full bg-[#000] rounded relative'>
-        <Image src={image} 
+        <Image src={`/images/${image}`}
             alt="Manipal Hospitals" 
             className='min-w-[100%] h-[100%] absolute aspect-video opacity-30 rounded z-0'
             layout="responsive"
-            placeholder="blur"
+            // placeholder="blur"
+            width={100}
+            height={50}
         />
         <Button variant="ghost" className='bg-transparent absolute left-0 right-0 m-auto z-20 hover:bg-transparent max-w-fit' aria-label='play video' onClick={()=>setOpenVideo(true)}>
           <Circle className='absolute text-white w-[38px] h-[38px] fill-black z-20'/>
