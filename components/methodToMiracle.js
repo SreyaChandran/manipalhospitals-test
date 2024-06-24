@@ -17,7 +17,11 @@ import {
   TabsTrigger,
 } from "@/components/ui/tabs"
 import { ChevronRight } from 'lucide-react'
-
+import MethodToMiracleCard from '@/components/methodToMiracleCard'
+import img1 from '@/public/images/M2M_1.jpg'
+import img2 from '@/public/images/maxresdefault.jpg'
+import img3 from '@/public/images/MIPC.jpg'
+import img4 from '@/public/images/Untitled-1.jpg'
 
 const MethodToMiracle = () => {
   return (
@@ -45,27 +49,18 @@ const MethodToMiracle = () => {
           <ChevronRight className='hidden lg:inline'/>
         </TabsTrigger>
       </TabsList>
-      <div className='flex-grow bg-black'>
-      <TabsContent value="tab1" className='flex items-center bg-black m-0'>
-        <video width="100%" height="auto" controls>
-        Your browser does not support the video tag.
-        </video>
+      <div className='flex-grow bg-black items-center justify-center'>
+      <TabsContent value="tab1" className='bg-black m-0 h-full'>
+        <MethodToMiracleCard image={img1} srcText="https://www.youtube.com/embed/as-NhTeESvY" />
       </TabsContent>
-      <TabsContent value="tab2" className='flex items-center bg-black m-0'>
-      <video width="100%" height="auto" controls>
-        Your browser does not support the video tag.
-        </video>
+      <TabsContent value="tab2" className='bg-black m-0 h-full'>
+        <MethodToMiracleCard image={img3} srcText="https://www.youtube.com/embed/937_joEm61c" />
       </TabsContent>
-      
-      <TabsContent value="tab3" className='flex items-center bg-black m-0'>
-      <video width="100%" height="auto" controls>
-        Your browser does not support the video tag.
-        </video>
+      <TabsContent value="tab3" className='bg-black m-0 h-full'>
+        <MethodToMiracleCard image={img4} srcText="https://www.youtube.com/embed/cPW7Q-YjqCo" />
       </TabsContent>
-      <TabsContent value="tab4" className='flex items-center bg-black m-0'>
-      <video width="100%" height="auto" controls>
-        Your browser does not support the video tag.
-        </video>
+      <TabsContent value="tab4" className='bg-black m-0 h-full'>
+        <MethodToMiracleCard image={img2} srcText="https://www.youtube.com/embed/TVeU3M2cv5w" />
       </TabsContent>
       </div>
       <div className='block w-full items-center py-4 px-8 md:py-8 md:px-16 max-w-[1660px]'>

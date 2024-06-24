@@ -5,7 +5,7 @@ import DoctorSearch from '@/components/doctorSearch'
 import MethodToMiracle from '@/components/methodToMiracle'
 import HumanCareExperts from '@/components/humanCareExperts'
 const LifeAtAGlance = dynamic(() => import('@/components/lifeAtAGlance'))
-
+const TheHealthHaven = dynamic(()=>import('@/components/theHealthHaven'))
 const Dashboard = () => {
   return (
     <div className="flex flex-col w-full">
@@ -16,6 +16,7 @@ const Dashboard = () => {
       <MethodToMiracle />
       <HumanCareExperts />
       <LifeAtAGlance />
+      <TheHealthHaven />
     </div>
   )
 }
