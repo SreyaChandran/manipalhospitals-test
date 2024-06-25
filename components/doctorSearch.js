@@ -31,24 +31,25 @@ const DoctorSearch = () => {
     setDoctors(data)
   }
   useEffect(()=>{
-    // console.log("selectedHospital",selectedHospital)
-    // console.log("selectedSpeciality",selectedSpeciality)
-    if(selectedHospital !== "" && selectedSpeciality !== ""){
+    console.log("selectedHospital",selectedHospital)
+    console.log("selectedSpeciality",selectedSpeciality)
+    // if(selectedHospital !== "" && selectedSpeciality !== ""){
       setSelectedDoctor("")
       setDoctors([])
       getDoctors(selectedHospital,selectedSpeciality)
-    }
+    // }
   },[selectedHospital, selectedSpeciality])
+  useEffect(()=>{console.log("speciality",speciality)},[speciality])
   return (
     <div className='static shadow-lg md:shadow-none mb-2 md:mb-0 mt-2 md:mt-0 md:absolute w-[90vw] md:w-[90vw] max-w-[1200px] left-0 right-0 ml-auto mr-auto md:bottom-5 xl:bottom-8 flex flex-col gap-2 sm:flex sm:flex-col md:grid md:grid-cols-4 items-center justify-center md:gap-4 border-[1.5px] border-slate-300 md:border-[#00b7ac] py-2 md:px-6 rounded-md bg-[#ffffffe6]'>
         <div className='border-b-2 w-full border-b-slate-300 md:border-b-0 md:border-r-2 md:border-r-[#00b7ac] flex items-center justify-center'>
-          <SelectHospital hospitals={hospitals} textVal="Select Hospital"  name='hospitalName' value={selectedHospital} setValue={setSelectedHospital} />
+          <SelectHospital hospitals={hospitals} textVal="Select Hospital"  name='hospitalName' selectedValue={selectedHospital} setSelectedValue={setSelectedHospital} />
         </div>
         <div className='border-b-2 w-full border-b-slate-300 md:border-b-0 md:border-r-2 md:border-r-[#00b7ac] flex items-center justify-center'>
-          <SelectHospital hospitals={speciality} textVal="Select speciality" name='specialityName' value={selectedSpeciality} setValue={setSelectedSpeciality} />
+          <SelectHospital hospitals={speciality} textVal="Select Speciality" name='specialityName' selectedValue={selectedSpeciality} setSelectedValue={setSelectedSpeciality} />
         </div>
         <div className='border-b-2 w-full border-b-slate-300 md:border-b-0 md:border-r-2 md:border-r-[#00b7ac] flex items-center justify-center'>
-          <SelectHospital hospitals={doctors} textVal="Select Doctors" name='doctorName' value={selectedDoctor} setValue={setSelectedDoctor} />
+          <SelectHospital hospitals={doctors} textVal="Select Doctors" name='doctorName' selectedValue={selectedDoctor} setSelectedValue={setSelectedDoctor} />
         </div>
         <div className='flex items-center justify-center'>
           <Button className='btn-primary md:btn-appoinment flex items-center justify-center gap-2 text-[#fff] px-8'>

@@ -16,7 +16,7 @@ const Header = () => {
         <div className='w-full bg-white flex-grow'>
           <div className='navbar-sec1 px-2 md:px-4 lg:px-10 xl:px-16 2xl:px-20 w-full max-w-[1300px] 2xl:w-[1300px] mx-auto h-full flex flex-row items-center justify-between gap-2'>
             <div className='w-[240px] max-[767px]:w-[200px] max-[575px]:hidden'>
-              <Image src={logo1} alt="Manipal Hospitals" />
+              <Link href="/home"><Image src={logo1} alt="Manipal Hospitals" /></Link>
             </div>
             <Link href="#" className='btn-lifesOn py-2 px-4 border-[1px] rounded border-[#fff] bg-[#fff] w-[100px] h-[50px] min-[576px]:hidden'>
               <Image src={lifesOn} alt="Manipal Hospitals" />

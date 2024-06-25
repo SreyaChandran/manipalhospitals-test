@@ -18,9 +18,9 @@ import {
 } from "@/components/ui/popover"
 
 
-const SelectHospital = ({hospitals, textVal, name="name", value, setValue}) => {
+const SelectHospital = ({hospitals, textVal, name="name", selectedValue, setSelectedValue}) => {
     const [open, setOpen] = useState(false)
-    // const [value, setValue] = useState("")
+    const [value, setValue] = useState("")
     return (
         <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
@@ -47,9 +47,10 @@ const SelectHospital = ({hospitals, textVal, name="name", value, setValue}) => {
               {hospitals.map((hospital) => (
                 <CommandItem
                   key={hospital.id}
-                  value={hospital[name]}
+                  value={hospital.id}
                   onSelect={(currentValue) => {
                     setValue(currentValue === value ? "" : currentValue)
+                    setSelectedValue(currentValue === value ? "" : hospital.id)
                     setOpen(false)
                   }}
                 >

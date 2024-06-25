@@ -25,6 +25,7 @@ const LifeCarouselCard = ({image, titleText, decText, srcText="https://www.youtu
             // placeholder="blur"
             width={100}
             height={50}
+            // priority
         />
         <Button variant="ghost" className='bg-transparent absolute left-0 right-0 m-auto z-20 hover:bg-transparent max-w-fit' aria-label='play video' onClick={()=>setOpenVideo(true)}>
           <Circle className='absolute text-white w-[38px] h-[38px] fill-black z-20'/>

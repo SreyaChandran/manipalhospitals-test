@@ -13,13 +13,24 @@ export const getSpecialitiesData = async () => {
     console.log("specialities", data);
     return data;
 };
-export const getDoctorsData = async (hospital:string="", speciality:string="") => {
-    if(hospital == "" && speciality == ""){
+export const getDoctorsData = async (hospital:number=0, speciality:number=0) => {
+    if(hospital == 0 && speciality == 0){
       const data = await db.select().from(doctors);
       console.log("doctors", data);
       return data;
-    }else{
-      const data = await db.select().from(doctors).where(sql `${doctors.hospitalUnitName} = ${hospital} or  ${doctors.specialityName} =  ${speciality}`);
+    }
+    else if(hospital == 0){
+      const data = await db.select().from(doctors).where(sql `${doctors.specialityId} =  ${speciality}`);
+      console.log("doctors", data);
+      return data;
+    }
+    else if(speciality == 0){
+      const data = await db.select().from(doctors).where(sql `${doctors.hospitalUnitId} = ${hospital}`);
+      console.log("doctors", data);
+      return data;
+    }
+    else{
+      const data = await db.select().from(doctors).where(sql `${doctors.hospitalUnitId} = ${hospital} and  ${doctors.specialityId} =  ${speciality}`);
       console.log("doctors", data);
       return data;
     }

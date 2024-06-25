@@ -15,7 +15,7 @@ export const doctors = pgTable("doctors",{
     id: serial("id").primaryKey(),
     doctorName: text("doctorName").notNull(),
     specialityId: integer("specialityId").notNull(),
-    specialityName: text("specialityName").notNull(),
+    // specialityName: text("specialityName").notNull(),
     hospitalUnitId: integer("hospitalUnitId").notNull(),
-    hospitalUnitName: text("hospitalUnitName").notNull(),
+    // hospitalUnitName: text("hospitalUnitName").notNull(),
 })

@@ -159,7 +159,7 @@ const MenuOne = () => {
         <NavigationMenuList>
             <NavigationMenuItem className='my-2'>
                 <NavigationMenuTrigger className='bg-transparent h-[30px] text-[#fff] menu-li font-semibold'>
-                    Centre of Excellence
+                    <Link href="/specialities">Centre of Excellence</Link>
                     <ChevronDown className="chevronDown relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180" aria-hidden="true" />
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className='pt-2 flex'>
