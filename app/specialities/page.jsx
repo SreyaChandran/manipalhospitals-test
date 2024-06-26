@@ -8,7 +8,7 @@ import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button'
 const TheHealthHaven = dynamic(()=>import('@/components/theHealthHaven'))
 import dynamic from 'next/dynamic'
-
+import Link from 'next/link'
 const Specialities = () => {
   const [otherSpecialities, setOtherSpecialities] = useState(false)
   const[clinicListView, setClinicListView] = useState(false)
@@ -592,23 +592,25 @@ const Specialities = () => {
         <Input className='h-12 shadow-xl border-[#00b7ac] w-[1070px] max-w-[90vw]' placeholder='Search Speciality' onChange={(e) => handleSearch(e.target.value)} />   
         <div className='w-fit grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'>
           {speciality.map((item,index)=>(
-            <div key={index} className='bg-white p-2 m-2 max-w-[200px] shadow-md aspect-square rounded flex flex-col items-center justify-center gap-2'>
-            <Image src={`/images/${item.image}`} 
-                alt="Manipal Hospitals" 
-                className='max-w-[70px] h-auto'
-                layout="responsive"
-                width={30}
-                height={30}
-            />
-            <p className='text-md font-medium text-slate-500 text-center'>{item.name}</p>
-          </div>
+            <Link href="#" key={index}>
+              <div  className='bg-white p-2 m-2 max-w-[200px] shadow-md aspect-square rounded flex flex-col items-center justify-center gap-2'>
+                <Image src={`/images/${item.image}`} 
+                    alt="Manipal Hospitals" 
+                    className='max-w-[70px] h-auto'
+                    layout="responsive"
+                    width={30}
+                    height={30}
+                />
+                <p className='text-md font-medium text-slate-500 text-center'>{item.name}</p>
+              </div>
+          </Link>
           ))}
           {!otherSpecialities && <div className='bg-primary text-white p-2 m-2 max-w-[200px] shadow-md aspect-square rounded flex flex-col items-center justify-center gap-0'>
             <Button className='text-md font-medium text-white text-center p-0 h-fit' onClick={()=>setOtherSpecialities(true)}>Other Specialities</Button>
-            <Button className='text-md font-medium text-white text-center p-0 h-fit' onClick={()=>setOtherSpecialities(true)}><ArrowRight className='text-white' /></Button>
+            <Button className='text-md font-medium text-white text-center p-0 h-fit' onClick={()=>setOtherSpecialities(true)} aria-label='other speciality'><ArrowRight className='text-white' /></Button>
           </div>}
           {otherSpecialities && other.map((item,index)=>(
-            <div key={index} className='bg-white p-2 m-2 max-w-[200px] shadow-md aspect-square rounded flex flex-col items-center justify-center gap-2'>
+            <Link href="#" key={index}><div className='bg-white p-2 m-2 max-w-[200px] shadow-md aspect-square rounded flex flex-col items-center justify-center gap-2'>
             <Image src={`/images/${item.image}`} 
                 alt="Manipal Hospitals" 
                 className='max-w-[70px] h-auto'
@@ -617,14 +619,14 @@ const Specialities = () => {
                 height={30}
             />
             <p className='text-md font-medium text-slate-500 text-center'>{item.name}</p>
-          </div>
+          </div></Link>
           ))}
           {!clinicListView && <div className='bg-primary text-white p-2 m-2 max-w-[200px] shadow-md aspect-square rounded flex flex-col items-center justify-center gap-0'>
             <Button className='text-md font-medium text-white text-center p-0 h-fit' onClick={()=>setClinicListView(true)}>Speciality Clinics</Button>
-            <Button className='text-md font-medium text-white text-center p-0 h-fit' onClick={()=>setClinicListView(true)}><ArrowRight className='text-white' /></Button>
+            <Button className='text-md font-medium text-white text-center p-0 h-fit' onClick={()=>setClinicListView(true)} aria-label='speciality clinic'><ArrowRight className='text-white' /></Button>
           </div>}
           {clinicListView && clinic.map((item,index)=>(
-            <div key={index} className='bg-white p-2 m-2 max-w-[200px] shadow-md aspect-square rounded flex flex-col items-center justify-center gap-2'>
+            <Link href="#" key={index}><div className='bg-white p-2 m-2 max-w-[200px] shadow-md aspect-square rounded flex flex-col items-center justify-center gap-2'>
             <Image src={`/images/${item.image}`} 
                 alt="Manipal Hospitals" 
                 className='max-w-[70px] h-auto'
@@ -633,7 +635,7 @@ const Specialities = () => {
                 height={30}
             />
             <p className='text-md font-medium text-slate-500 text-center'>{item.name}</p>
-          </div>
+          </div></Link>
           ))}
         </div>
       </div>
