@@ -1,10 +1,17 @@
+"use client"
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import bannerImage from '@/public/images/specilaity-banner-image_1678361627.webp'
 import Accident_Icon12 from '@/public/images/Accident_Icon12.png'
 import { Input } from "@/components/ui/input"
+import { ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button'
+const TheHealthHaven = dynamic(()=>import('@/components/theHealthHaven'))
+import dynamic from 'next/dynamic'
 
 const Specialities = () => {
+  const [otherSpecialities, setOtherSpecialities] = useState(false)
+  const[clinicListView, setClinicListView] = useState(false)
   const specialitieList = [
       {
         name: "Accident and Emergency Care",
@@ -305,17 +312,17 @@ const Specialities = () => {
     },
     {
       name: "Oral Maxillo Facial Surgery",
-      image: "COE-Icons_Dental_Medicine_-_Color1.png",
+      image: "COE-Icons_Dental_Medicine_-_Color1.webp",
       link: "/specialities/oral-maxillo-facial-surgery/"
     },
     {
       name: "Paediatric Cancer Care",
-      image: "specialty-color-icon3_1684322171_(1).png",
+      image: "specialty-color-icon3_1684322171_(1).webp",
       link: "/specialities/paediatric-cancer-care/"
     },
     {
       name: "Paediatric Cardiology",
-      image: "pediatric-cardiology-hospital-in-bangalore.png",
+      image: "pediatric-cardiology-hospital-in-bangalore.webp",
       link: "/specialities/paediatric-cardiology/"
     },
     {
@@ -330,22 +337,22 @@ const Specialities = () => {
     },
     {
       name: "Paediatric Infectious Disease",
-      image: "specialty-color-icon3_1684322171.png",
+      image: "specialty-color-icon3_1684322171.webp",
       link: "/specialities/paediatric-infectious-disease/"
     },
     {
       name: "Paediatric Intensive Care Unit",
-      image: "Iconblue1_1677670621.png",
+      image: "Iconblue1_1677670621.webp",
       link: "/specialities/paediatric-intensive-care-unit/"
     },
     {
       name: "Paediatric Neurology",
-      image: "specialty-color-icon3_1684322171_(1)1.png",
+      image: "specialty-color-icon3_1684322171_(1)1.webp",
       link: "/specialities/paediatric-neurology/"
     },
     {
       name: "Paediatric Surgery",
-      image: "Icon-blue_1682328301.png",
+      image: "Icon-blue_1682328301.webp",
       link: "/specialities/paediatric-surgery/"
     },
     {
@@ -370,7 +377,7 @@ const Specialities = () => {
     },
     {
       name: "Pediatric Bone Marrow Transplant",
-      image: "pediatrc-bone-marrow-transplant-bangalore.png",
+      image: "pediatrc-bone-marrow-transplant-bangalore.webp",
       link: "/specialities/pediatric-bone-marrow-transplant/"
     },
     {
@@ -380,7 +387,7 @@ const Specialities = () => {
     },
     {
       name: "Physical Medicine and Rehabilitation",
-      image: "best-phyio-therapy-and-rehabilation-centre-in-bangalore.png",
+      image: "best-phyio-therapy-and-rehabilation-centre-in-bangalore.webp",
       link: "/specialities/physical-medicine-and-rehabilitation/"
     },
     {
@@ -445,7 +452,7 @@ const Specialities = () => {
     },
     {
       name: "Senior Care Program",
-      image: "geriatrics1.png",
+      image: "geriatrics1.webp",
       link: "/specialities/senior-care-program/"
     },
     {
@@ -465,7 +472,7 @@ const Specialities = () => {
     },
     {
       name: "Thoracic Surgery",
-      image: "Speciality_Color_Icon1.png",
+      image: "Speciality_Color_Icon1.webp",
       link: "/specialities/thoracic-surgery/"
     },
     {
@@ -475,7 +482,7 @@ const Specialities = () => {
     },
     {
       name: "Trauma Care",
-      image: "COE-Icons_ICU_-_Color1.png",
+      image: "COE-Icons_ICU_-_Color1.webp",
       link: "/specialities/trauma-care/"
     },
     {
@@ -488,32 +495,32 @@ const Specialities = () => {
   const clinicList = [
     {
       name: "Autism Clinic",
-      image: "Iconblue1_16776706211.png",
+      image: "Iconblue1_16776706211.webp",
       link: "/specialities/autism-clinic/"
     },
     {
       name: "Cystic Fibrosis Clinic",
-      image: "COE-Icons_Fibrosis_-_Color.png",
+      image: "COE-Icons_Fibrosis_-_Color.webp",
       link: "/specialities/cystic-fibrosis-clinic/"
     },
     {
       name: "Epilepsy Clinic",
-      image: "Icon_Blue61.png",
+      image: "Icon_Blue61.webp",
       link: "/specialities/epilepsy-clinic/"
     },
     {
       name: "Fibroid Clinic",
-      image: "book-your-video-doctor-consultations-online-today-manipal-hospitals-desktop-new.png",
+      image: "book-your-video-doctor-consultations-online-today-manipal-hospitals-desktop-new.webp",
       link: "/specialities/fibroid-clinic/"
     },
     {
       name: "Hair Transplantation Clinic",
-      image: "COE-Icons_Dermatology_-_Color1.png",
+      image: "COE-Icons_Dermatology_-_Color1.webp",
       link: "/specialities/hair-transplantation-clinic/"
     },
     {
       name: "Healthy Weight Clinic",
-      image: "medical-gastro2.png",
+      image: "medical-gastro2.webp",
       link: "/specialities/healthy-weight-clinic/"
     },
     {
@@ -533,16 +540,45 @@ const Specialities = () => {
     },
     {
       name: "Lymphedema Clinic",
-      image: "COE-Icons_Cosmetic_Surgery_-_Blue1.png",
+      image: "COE-Icons_Cosmetic_Surgery_-_Blue1.webp",
       link: "/specialities/lymphedema-clinic/"
     },
     {
       name: "Neuromuscular Clinic",
-      image: "Icon_Blue62.png",
+      image: "Icon_Blue62.webp",
       link: "/specialities/neuromuscular-clinic/"
     }
   ]
-  
+  const [speciality, setSpeciality] = useState(specialitieList)
+  const [other, setOther] = useState(resultotherList)
+  const [clinic, setClinic] = useState(clinicList)
+  const handleSearch = (searchTerm) => {
+    const filteredList1 = specialitieList.filter(item =>
+      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    console.log("filteredList1",filteredList1)
+    setSpeciality(filteredList1);
+
+    const filteredList2 = resultotherList.filter(item =>
+      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    console.log("filteredList2",filteredList2)
+    setOther(filteredList2);
+
+    const filteredList3 = clinicList.filter(item =>
+      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    console.log("filteredList3",filteredList3)
+    setClinic(filteredList3);
+    if(searchTerm.length > 0){
+      setOtherSpecialities(true)
+      setClinicListView(true)
+    }
+    else{
+      setOtherSpecialities(false)
+      setClinicListView(false)
+    }
+  };
   return (
     <div class="block w-full max-w-[1660px]"> 
       <Image src={bannerImage} 
@@ -553,9 +589,9 @@ const Specialities = () => {
         blurDataURL="../public/images/specilaity-banner-image_1678361627.webp"
       />
       <div className='w-auto py-20 md:px-[140px] bg-[#00b7ac] flex flex-col items-center gap-10'>
-        <Input className='h-12 shadow-xl border-[#00b7ac] w-[1070px] max-w-[90vw]' placeholder='Search Speciality' />   
+        <Input className='h-12 shadow-xl border-[#00b7ac] w-[1070px] max-w-[90vw]' placeholder='Search Speciality' onChange={(e) => handleSearch(e.target.value)} />   
         <div className='w-fit grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'>
-          {specialitieList.map((item,index)=>(
+          {speciality.map((item,index)=>(
             <div key={index} className='bg-white p-2 m-2 max-w-[200px] shadow-md aspect-square rounded flex flex-col items-center justify-center gap-2'>
             <Image src={`/images/${item.image}`} 
                 alt="Manipal Hospitals" 
@@ -567,10 +603,42 @@ const Specialities = () => {
             <p className='text-md font-medium text-slate-500 text-center'>{item.name}</p>
           </div>
           ))}
-          
-          
-          
+          {!otherSpecialities && <div className='bg-primary text-white p-2 m-2 max-w-[200px] shadow-md aspect-square rounded flex flex-col items-center justify-center gap-0'>
+            <Button className='text-md font-medium text-white text-center p-0 h-fit' onClick={()=>setOtherSpecialities(true)}>Other Specialities</Button>
+            <Button className='text-md font-medium text-white text-center p-0 h-fit' onClick={()=>setOtherSpecialities(true)}><ArrowRight className='text-white' /></Button>
+          </div>}
+          {otherSpecialities && other.map((item,index)=>(
+            <div key={index} className='bg-white p-2 m-2 max-w-[200px] shadow-md aspect-square rounded flex flex-col items-center justify-center gap-2'>
+            <Image src={`/images/${item.image}`} 
+                alt="Manipal Hospitals" 
+                className='max-w-[70px] h-auto'
+                layout="responsive"
+                width={30}
+                height={30}
+            />
+            <p className='text-md font-medium text-slate-500 text-center'>{item.name}</p>
+          </div>
+          ))}
+          {!clinicListView && <div className='bg-primary text-white p-2 m-2 max-w-[200px] shadow-md aspect-square rounded flex flex-col items-center justify-center gap-0'>
+            <Button className='text-md font-medium text-white text-center p-0 h-fit' onClick={()=>setClinicListView(true)}>Speciality Clinics</Button>
+            <Button className='text-md font-medium text-white text-center p-0 h-fit' onClick={()=>setClinicListView(true)}><ArrowRight className='text-white' /></Button>
+          </div>}
+          {clinicListView && clinic.map((item,index)=>(
+            <div key={index} className='bg-white p-2 m-2 max-w-[200px] shadow-md aspect-square rounded flex flex-col items-center justify-center gap-2'>
+            <Image src={`/images/${item.image}`} 
+                alt="Manipal Hospitals" 
+                className='max-w-[70px] h-auto'
+                layout="responsive"
+                width={30}
+                height={30}
+            />
+            <p className='text-md font-medium text-slate-500 text-center'>{item.name}</p>
+          </div>
+          ))}
         </div>
+      </div>
+      <div className='w-[1300px] max-w-[90vw] mx-auto'>
+        <TheHealthHaven />
       </div>
     </div>
   )
