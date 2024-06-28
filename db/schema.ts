@@ -1,4 +1,4 @@
-import { integer, serial, text, boolean, pgTable, json } from "drizzle-orm/pg-core";
+import { integer, serial, text, pgTable, json } from "drizzle-orm/pg-core";
 
 export const specialities = pgTable("specialities", {
   id: serial("id").primaryKey(),
@@ -15,7 +15,5 @@ export const doctors = pgTable("doctors",{
     id: serial("id").primaryKey(),
     doctorName: text("doctorName").notNull(),
     specialityId: integer("specialityId").notNull(),
-    // specialityName: text("specialityName").notNull(),
     hospitalUnitId: integer("hospitalUnitId").notNull(),
-    // hospitalUnitName: text("hospitalUnitName").notNull(),
 })

@@ -1,7 +1,7 @@
 "use server"
 import db from "@/db/drizzle";
 import { hospitals, specialities, doctors } from "@/db/schema";
-import { asc, eq, sql } from 'drizzle-orm';
+import { asc, sql } from 'drizzle-orm';
 
 export const getHospitalsData = async () => {
   const data = await db.select().from(hospitals).orderBy(asc(hospitals.id));

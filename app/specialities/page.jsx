@@ -592,7 +592,7 @@ const Specialities = () => {
         <Input className='h-12 shadow-xl border-[#00b7ac] w-[1070px] max-w-[90vw]' placeholder='Search Speciality' onChange={(e) => handleSearch(e.target.value)} />   
         <div className='w-fit grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'>
           {speciality.map((item,index)=>(
-            <Link href="#" key={index}>
+            <Link href={item.link} key={index}>
               <div  className='bg-white p-2 m-2 max-w-[200px] shadow-md aspect-square rounded flex flex-col items-center justify-center gap-2'>
                 <Image src={`/images/${item.image}`} 
                     alt="Manipal Hospitals" 
