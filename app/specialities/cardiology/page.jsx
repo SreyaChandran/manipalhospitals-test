@@ -85,7 +85,7 @@ const Cardiology = () => {
             <li>Device closure of Septal Defects such as Ventricular Septal Defects (VSD) and Atrial Septal Defects (ASD)</li>
           </ul>
         </div>
-        <div className='grid grid-cols-4 w-full'>
+        <div className='grid grid-cols-4 gap-4 w-full py-[60px] px-[20px] md:px-[60px] lg:px-[50px] xl:px-[100px]'>
         {Array.from({ length: 5 }).map((_, index) => (<DoctorsCard  key=""/>))}
         </div>
     </div>
