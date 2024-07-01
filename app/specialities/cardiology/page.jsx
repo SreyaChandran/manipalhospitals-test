@@ -4,9 +4,66 @@ import bannerImage from '@/public/images/cardiology-treatment-hospital-in-bangal
 import speciality_icon from '@/public/images/Cardiology_white.png'
 import speciality_img_1 from '@/public/images/cardiology-treatment-in-bangalore.webp'
 import speciality_img_2 from '@/public/images/cardiology-hospital-in-bangalore.webp'
+import speciality_img_3 from '@/public/images/cardiology-specialist-in-bangalore.webp'
+
 import SpecialityCarouselOne from '@/components/specialityCarouselOne'
 import DoctorsCard from '@/components/doctorsCard'
+import Faq from '@/components/faq'
+import ExploreStories from '@/components/exploreStories'
+import BlogCards from '@/components/blogCards'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
 const Cardiology = () => {
+  const blogs = [
+    {
+      "link": "#",
+      "title": "Coronary Artery Disease: Recognising The Early Warning Signs To Prevent Heart Attack",
+      "image": {
+        "webp": "images/coronary-artery-disease-symptoms.webp",
+        "png": "images/coronary-artery-disease-symptoms.png"
+      },
+      "author": "Department of Cardiology",
+      "date": "Dec 01, 2023",
+      "readTime": "3 Min Read",
+      "profileImage": "images/spec_photo/team-manipal-hospitals.png"
+    },
+    {
+      "link": "https://www.manipalhospitals.com/blog/awakening-youth-to-the-dangers-of-cardiac-arrest/",
+      "title": "Silent Threats, Loud Calls - Awakening Youth To The Dangers of Cardiac Arrest",
+      "image": {
+        "webp": "images/healthy-heart-awareness-manipal-hospitals.webp",
+        "png": "images/healthy-heart-awareness-manipal-hospitals.png"
+      },
+      "author": "Dr. Tanmai Yermal (Jain)",
+      "date": "Nov 17, 2023",
+      "readTime": "2 Min Read",
+      "profileImage": "uploads/doctors_photo/interventional-cardiologist-in-kharadi-pune-dr-tanmai-yermal-jain.png"
+    },
+    {
+      "link": "https://www.manipalhospitals.com/blog/decoding-angina-your-hearts-distress-call/",
+      "title": "Decoding Angina - Your Heart's Distress Call",
+      "image": {
+        "webp": "images/heart-disease-treatment-manipal-hospitals.webp",
+        "png": "images/heart-disease-treatment-manipal-hospitals.png"
+      },
+      "author": "Dr. Ranjan Kr Sharma",
+      "date": "Nov 17, 2023",
+      "readTime": "2 Min Read",
+      "profileImage": "uploads/doctors_photo/dr-ranjan-kr-sharma-consultant-cardiology.png"
+    },
+    {
+      "link": "https://www.manipalhospitals.com/blog/athletes-and-heart-disease-why-does-it-happen/",
+      "title": "Athletes And Heart Disease: Why Does It Happen?",
+      "image": {
+        "webp": "images/athletes-and-heart-disease1.webp",
+        "png": "images/athletes-and-heart-disease1.png"
+      },
+      "author": "Department of Cardiology",
+      "date": "Nov 03, 2023",
+      "readTime": "4 Min Read",
+      "profileImage": "images/spec_photo/team-manipal-hospital23.png"
+    }
+  ]  
   return (
     <div class="block w-full max-w-[1660px]"> 
         <Image src={bannerImage} 
@@ -87,6 +144,42 @@ const Cardiology = () => {
         </div>
         <div className='grid grid-cols-4 gap-2 w-full py-[20px] px-[20px] md:px-[60px] lg:px-[50px] xl:px-[100px]'>
         {Array.from({ length: 8 }).map((_, index) => (<DoctorsCard  key=""/>))}
+        </div>
+        <div className='w-full pt-[40px] md:pt-[70px] xl:pt-[100px] pb-[60px] px-[20px] md:px-[60px] lg:px-[50px] xl:px-[100px] flex flex-col-reverse lg:flex-row gap-[40px] xl:gap-[80px] items-start justify-between '>
+            <div>
+              <p className=' text-[30px] font-bold pb-[10px] text-[#00b7ac] '>Facilities & Services</p>
+              <p className='text-sm text-slate-500 leading-8 md:leading-10'>
+              <Link href="#" className='text-primary font-medium'>Manipal Hospitals cardiologists </Link> Manipal Hospitals cardiologists and cardiovascular surgeons believe in precise diagnosis for effective treatment. The faculty includes - Expert echo cardiologists - Electro physiologists - Interventional cardiologists and radiologists 
+              </p>
+            </div>
+            <div className='md:w-[70vw] lg:min-w-[350px] xl:min-w-[450px] h-auto'>
+              <Image src={speciality_img_3} 
+                  alt="Manipal Hospitals" 
+                  className='w-full h-auto'
+                  layout="responsive"
+                  placeholder="blur"
+                  blurDataURL="../public/images/cardiology-hospital-in-bangalore.webp"
+                />
+            </div>
+        </div>
+        <div className='w-full pt-[40px] md:pt-[70px] xl:pt-[100px] pb-[60px] px-[20px] md:px-[60px] lg:px-[50px] xl:px-[100px] bg-primary border-b-[6px] border-b-[#00b7ac]'>
+          <p className='text-white text-4xl font-bold'>FAQ</p>
+          <Faq />
+        </div>
+        <div className='w-full pt-[20px] md:pt-[30px] xl:pt-[50px] pb-[60px] px-[20px] md:px-[60px] lg:px-[50px] xl:px-[100px] flex flex-col items-center gap-3'>
+          <p className='text-sm text-slate-500 leading-8 md:leading-10'>Manipal Hospitals is dedicated to providing high-quality, personalised care and building long-term partnerships with its patients. Our Cardiology department and its patients are a testament to this. Contact us to know more about heart problems and book an appointment with one of our Cardiovascular specialists today.</p>
+          <Button variant="default" className='mx-auto'>Book Appoinment</Button>
+        </div>
+        <ExploreStories />
+        <div className='w-full pt-[20px] md:pt-[30px] xl:pt-[50px] pb-[60px] px-[20px] md:px-[60px] lg:px-[50px] xl:px-[100px] flex flex-col items-center gap-3'>
+          <p className='w-full text-center text-3xl text-primary font-medium'>Blogs</p>
+          <div className='grid grid-cols-1 sm:grid-cols-2 gap-2'>
+            {
+              blogs.map((item,index)=>(
+                <BlogCards key={index} blog={item} />
+              ))
+            }
+          </div>
         </div>
     </div>
   )

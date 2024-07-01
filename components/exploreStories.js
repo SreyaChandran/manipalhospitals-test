@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/carousel"
 import LifeCarouselCard from '@/components/lifeCarouselCard'
 import TestimonialCard from '@/components/testimonialCard'
-const LifeAtAGlance = () => {
+const ExploreStories = () => {
   const carousel1_1 = 'total-knee-replacement.webp';
   const carousel1_2 = 'partial-molar-pregnancy-with-hellp-syndrome.webp';
   const carousel1_3 = 'patients-journey-to-recovery.webp';
@@ -45,15 +45,9 @@ const LifeAtAGlance = () => {
   const carousel5_4 = 'internal-medicine-doctors-at-manipal.webp';
   const carousel5_5 = 'exclusive-senior-care-pathway.webp';
 
-  const testimonial = [{name:"Ms. K. Lavanya",description:"The services that I receive from Dr.Dharmendra Kumar are excellent. Dr Dharmendra Kumar ensu", link:"#", doctor:"Dr. V Dharmendra Kumar", speciality:"Cancer Care/Oncology", hospital:"Manipal Super Speciality Hospitals-Vijayawada"},
-    {name:"Mr. C H Venkata Subba Rao",description:"Dear Manipal, We are happy with the service given by each and every person here.", link:"#", doctor:"Dr. Murali Chekuri", speciality:"Neurology", hospital:"Manipal Super Speciality Hospitals-Vijayawada"},
-    {name:"Mr. K. Eswar Sai Ganesh",description:"Myself, Eswar Sai Ganesh and I have been admitted here 6 years ago. To date, I am honoured ", link:"#", doctor:"Dr. G Krishna Reddy", speciality:"Cancer Care/Oncology", hospital:"Manipal Super Speciality Hospitals-Vijayawada"},
-    {name:"Mr. Narendra Gupta",description:"Very friendly, talking to Sir, makes us feel relaxed about the problem. A Good  Doctor", link:"#", doctor:"Dr. G V Reddy", speciality:"Orthopaedics", hospital:"Manipal Super Speciality Hospitals-Vijayawada"},
-    {name:"Mr. Kommuguri Solomon Raju",description:"My name is KOMMUGURI SOLOMON RAJU and I have been admitted to Manipal Hospitals, as I was getting chest pain since one w..", link:"#", doctor:"Dr. Kosuru Srinivas Babu", speciality:"Cardiothoracic Vascular Surgery", hospital:"Manipal Super Speciality Hospitals-Vijayawada"}
-  ]
   return (
     <div className='w-full items-center py-4 md:py-8 max-w-[1660px] bg-[#00b7ac] text-center'>
-        <p className='text-white text-[44px] font-bold py-[30px]'>Life at a Glance</p>
+        <p className='text-white text-[44px] font-bold py-[30px]'>Explore Stories</p>
         <Tabs defaultValue="life-tab-1" className="w-full bg-transparent pb-4">
             <TabsList className="w-full flex flex-row items-center justify-center gap-4 bg-transparent pb-8 flex-wrap">
                 <TabsTrigger value="life-tab-1" className='btn-tab lg:text-xl leading-6 font-bold data-[state=active]:bg-white data-[state=active]:text-[#00b7ac] lg:py-2 lg:px-4 '>Patient Stories</TabsTrigger>
@@ -61,7 +55,6 @@ const LifeAtAGlance = () => {
                 <TabsTrigger value="life-tab-3" className='btn-tab lg:text-xl leading-6 font-bold data-[state=active]:bg-white data-[state=active]:text-[#00b7ac] lg:py-2 lg:px-4'>General</TabsTrigger>
                 <TabsTrigger value="life-tab-4" className='btn-tab lg:text-xl leading-6 font-bold data-[state=active]:bg-white data-[state=active]:text-[#00b7ac] lg:py-2 lg:px-4'>Health Days</TabsTrigger>
                 <TabsTrigger value="life-tab-5" className='btn-tab lg:text-xl leading-6 font-bold data-[state=active]:bg-white data-[state=active]:text-[#00b7ac] lg:py-2 lg:px-4'>Events</TabsTrigger>
-                <TabsTrigger value="life-tab-6" className='btn-tab lg:text-xl leading-6 font-bold data-[state=active]:bg-white data-[state=active]:text-[#00b7ac] lg:py-2 lg:px-4'>Written Testimonials</TabsTrigger>
             </TabsList>
             <TabsContent value="life-tab-1">
               <Carousel className="w-full">
@@ -228,25 +221,10 @@ const LifeAtAGlance = () => {
                 <CarouselNext />
               </Carousel>
             </TabsContent>
-            <TabsContent value="life-tab-6">
-              <Carousel className="w-full">
-                <CarouselContent className="-ml-1">
-                {testimonial.map((item,index)=>(
-                  <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3 bg-[#00b7ac]">
-                    <div className="p-1 m-1">
-                      <TestimonialCard name={item.name} description={item.description} link={item.link} doctor={item.doctor} speciality={item.speciality} hospital={item.hospital} />
-                    </div>
-                  </CarouselItem>
-                ))}
-                </CarouselContent>
-                <CarouselPrevious className=''/>
-                <CarouselNext />
-              </Carousel>
-            </TabsContent>
         </Tabs>
         <Button variant="default" className='bg-white text-[#00b7ac] text-[18px] h-15 w-30 px-10 py-2 font-medium my-8'>View All</Button>
     </div>
   )
 }
 
-export default LifeAtAGlance
+export default ExploreStories
