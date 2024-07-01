@@ -72,6 +72,10 @@
     background: rgb(2,78,160);
     background: linear-gradient(280deg, rgba(2,78,160,1) 0%, rgba(0,183,172,0.7525603991596639) 100%);
   }
+  .gradient-bg-3{
+    background: rgb(2,78,160);
+    background: linear-gradient(180deg, rgba(2,78,160,1) 0%, rgba(1,190,179,0.7525603991596639) 100%);
+  }
   .gradient-btn{
     stroke: rgb(2,78,160);
     stroke: linear-gradient(90deg, rgba(2,78,160,1) 0%, rgba(0,183,172,1) 100%);
