@@ -7,7 +7,7 @@ import { Clock } from 'lucide-react';
 const BlogCards = ({blog}) => {
   return (
     <div className='min-w-full rounded-lg grid grid-cols-1 sm:grid-cols-2 shadow-lg shadow-slate-300 gradient-bg-3'>
-        <Image src={img1} alt='The Health Haven' className='rounded-l-lg min-h-full'/>
+        <Image src={`/${blog.image.webp}`} alt='The Health Haven' className='rounded-l-lg min-h-full w-auto' width={100} height={50}/>
         <div className='min-h-full w-[98%] flex flex-col item-center justify-between p-2 lg:px-4 xl:px-2 bg-white border-t-[1px] border-t-slate-100'>
             <p className='text-primary text-[13px] leading-5 font-normal'>{blog.title}</p>
             <Image src={img3} alt='' className='w-[35px] h-[35px] lg:w-[35px] lg:h-[35px] rounded-full mx-auto' />
