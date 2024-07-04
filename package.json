@@ -30,9 +30,7 @@
     "sharp": "^0.33.4",
     "shortid": "^2.2.16",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7",
-    "@swc/core": "^1.2.0",
-    "@swc/node": "^1.2.0"
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",
