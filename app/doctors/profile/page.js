@@ -95,7 +95,7 @@ const page = () => {
                     </div>
                 </div>
             </div>
-            <div className='w-[380px] h-[600px] bg-white rounded-lg drop-shadow-lg'>
+            <div className='w-[96%] mx-[2%] lg:w-[380px] h-[600px] bg-white rounded-lg drop-shadow-lg'>
                 <div className='w-full min-h-[150px] bg-primary rounded-t-lg p-6'>
                     <div className='flex flex-row items-center justify-between'>
                         <p className='text-sm uppercase text-[#a2c2e9]'>PICK A TIME SLOT</p>
