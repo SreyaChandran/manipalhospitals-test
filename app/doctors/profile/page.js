@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
 import doctor_profile_pic from '@/public/images/critical-care-medicine-expert-in-bangalore-dr-adarsh-kulkarni.png'
@@ -6,26 +7,28 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {
     DropdownMenu,
     DropdownMenuContent,
-    DropdownMenuGroup,
     DropdownMenuItem,
     DropdownMenuLabel,
-    DropdownMenuPortal,
     DropdownMenuSeparator,
-    DropdownMenuShortcut,
-    DropdownMenuSub,
-    DropdownMenuSubContent,
-    DropdownMenuSubTrigger,
     DropdownMenuTrigger,
-  } from "@/components/ui/dropdown-menu"
-
+} from "@/components/ui/dropdown-menu"
+import { ChevronDown } from "lucide-react" 
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel"
+  
 const page = () => {
   return (
     <div class="relative w-full max-w-[1660px] h-[900px] ">
         <div className='w-full h-[180px] sm:h-[200px] md:h-[280px] lg:h-[320px] xl:h-[380px] 2xl:h-[450px] bg-[#00b7ac]'></div>
-        <div className='absolute top-0 w-full pb-[50px] flex flex-row items-start justify-center gap-6 py-[60px]'>
-            <div className='w-[750px] min-h-[600px] flex flex-col gap-4'>
-                <div className='w-full rounded-lg bg-white h-[225px] drop-shadow-lg flex flex-row items-start gap-2'>
-                    <div className='bg-primary flex flex-col items-center justify-center h-full w-[240px] rounded-l-lg py-4 gap-2'>
+        <div className='mx-[2%] lg;mx-0 absolute top-0 w-[96%] lg:w-full pb-[50px] flex flex-col lg:flex-row items-start justify-center gap-6 py-[60px]'>
+            <div className='w-full lg:w-[750px] min-h-[600px] flex flex-col gap-4'>
+                <div className='w-full rounded-lg bg-white h-auto md:h-[225px] drop-shadow-lg flex flex-col md:flex-row items-start gap-2'>
+                    <div className='bg-primary flex flex-col items-center justify-center h-full w-full md:w-[240px] rounded-l-lg py-4 gap-2'>
                         <p className='text-white text-xs'>Old Airport Road - Bengaluru</p>
                         <Image src={doctor_profile_pic} 
                             alt="Manipal Hospitals" 
@@ -100,26 +103,47 @@ const page = () => {
                     </div>
                     <div className='flex flex-row items-center justify-between mt-4'>
                         <Button variant="outline" className='bg-transparent outline-1 outline-white border-white text-white text-[11px] p-2'>Old Airport Road - Bengaluru</Button>
-                        <Button variant="outline" className='bg-transparent outline-1 outline-white border-white text-white text-[11px] p-2'>ICU andCritical Care</Button>
-                        {/* <DropdownMenu>
+                        <DropdownMenu>
                         <DropdownMenuTrigger asChild={true} className='max-[767px]:hidden'>
                                 <Button variant="outline" className='bg-transparent outline-1 outline-white border-white text-white text-[11px] p-2 w-[150px]'>
-                                    Hospitals
+                                    ICU andCritical Care
                                     <ChevronDown className="chevronDown relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180" aria-hidden="true" />
                                 </Button>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent>
-    <DropdownMenuLabel>My Account</DropdownMenuLabel>
-    <DropdownMenuSeparator />
-    <DropdownMenuItem>Profile</DropdownMenuItem>
-    <DropdownMenuItem>Billing</DropdownMenuItem>
-    <DropdownMenuItem>Team</DropdownMenuItem>
-    <DropdownMenuItem>Subscription</DropdownMenuItem>
-  </DropdownMenuContent>
-</DropdownMenu> */}
-
+                        <DropdownMenuContent className='w-full'>
+                            <DropdownMenuItem className='text-xs'>ICU andCritical Care</DropdownMenuItem>
+                        </DropdownMenuContent>
+                        </DropdownMenu>
                     </div>
-                    
+                </div>
+                <div className='p-2'>
+                    <p className='text-sm text-slate-800'>Book an appointment for Consultation</p>
+                    <div className='flex items-center justify-center gap-4 flex-wrap py-2'>
+                        <Button variant="default" className='text-xs'>Physical Hospital Visit</Button>
+                        <Button variant="default" className='text-xs bg-[#00b7ac]'>Video Consultation</Button>
+                        <Button variant="default" className='text-xs'>Prime Consultation</Button>
+                    </div>
+                    <p className='text-xs leading-5 text-slate-500 py-2'>All slots are booked for the doctor today. Please check for another day or call us at 1800 102 4647.</p>
+                    <Carousel
+                        opts={{
+                            align: "start",
+                        }}
+                        className="w-full max-w-sm px-4"
+                        >
+                        <CarouselContent>
+                            {Array.from({ length: 5 }).map((_, index) => (
+                            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                                <div className="p-1">
+                                {index + 1}
+                                </div>
+                            </CarouselItem>
+                            ))}
+                        </CarouselContent>
+                        <CarouselPrevious className='h-6 w-6' />
+                        <CarouselNext className='h-6 w-6'/>
+                    </Carousel>
+                    <Button className='w-full bg-white border-2 hover:bg-transparent border-primary rounded-none font-normal text-xs text-primary mb-2' variant="outline">Next Available Slot</Button>
+                    <Button className='w-full btn-appoinment rounded-none font-normal text-xs text-primary hover:text-white mt-4 border-none' variant="outline">Request Call Back</Button>
                 </div>
             </div>
         </div>
