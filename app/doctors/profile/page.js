@@ -26,7 +26,7 @@ const page = () => {
     <div class="relative w-full max-w-[1660px] h-[900px] ">
         <div className='w-full h-[180px] sm:h-[200px] md:h-[280px] lg:h-[320px] xl:h-[380px] 2xl:h-[450px] bg-[#00b7ac]'></div>
         <div className='mx-[2%] lg;mx-0 absolute top-0 w-[96%] lg:w-full pb-[50px] flex flex-col lg:flex-row items-start justify-center gap-6 py-[60px]'>
-            <div className='w-full lg:w-[750px] min-h-[600px] flex flex-col gap-4'>
+            <div className='w-full lg:w-[750px] min-h-[550px] flex flex-col gap-4'>
                 <div className='w-full rounded-lg bg-white h-auto md:h-[225px] drop-shadow-lg flex flex-col md:flex-row items-start gap-2'>
                     <div className='bg-primary flex flex-col items-center justify-center h-full w-full md:w-[240px] rounded-l-lg py-4 gap-2'>
                         <p className='text-white text-xs'>Old Airport Road - Bengaluru</p>
@@ -95,7 +95,7 @@ const page = () => {
                     </div>
                 </div>
             </div>
-            <div className='w-[96%] mx-[2%] lg:w-[380px] h-[600px] bg-white rounded-lg drop-shadow-lg'>
+            <div className='w-[96%] mx-[2%] lg:w-[380px] h-auto bg-white rounded-lg drop-shadow-lg pb-4'>
                 <div className='w-full min-h-[150px] bg-primary rounded-t-lg p-6'>
                     <div className='flex flex-row items-center justify-between'>
                         <p className='text-sm uppercase text-[#a2c2e9]'>PICK A TIME SLOT</p>
