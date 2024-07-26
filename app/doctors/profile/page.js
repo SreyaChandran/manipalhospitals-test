@@ -131,34 +131,34 @@ const page = () => {
                         className="w-full px-4"
                         >
                         <CarouselContent>
-                            <CarouselItem lassName="basis-1/3">
+                            <CarouselItem className="basis-1/3">
                                 <div className="p-1 text-center text-xs">
                                     <p className='text-slate-400'>Wed, 31 Jul</p>
-                                    <p className='text-[#00b7ac]'> No Slots Available</p>
+                                    <p className='text-[#00b7ac] text-[10px]'> No Slots Available</p>
                                 </div>
                             </CarouselItem>
-                            <CarouselItem lassName="basis-1/3">
+                            <CarouselItem className="basis-1/3">
                                 <div className="p-1 text-center text-xs">
                                     <p className='text-slate-400'>Thu, 01 Aug</p>
-                                    <p className='text-slate-400'> Check Availablity</p>
+                                    <p className='text-slate-400 text-[10px]'> Check Availablity</p>
                                 </div>
                             </CarouselItem>
-                            <CarouselItem lassName="basis-1/3">
+                            <CarouselItem className="basis-1/3">
                                 <div className="p-1 text-center text-xs">
                                     <p className='text-slate-400'>Fri, 02 Aug</p>
-                                    <p className='text-slate-400'> Check Availablity</p>
+                                    <p className='text-slate-400 text-[10px]'> Check Availablity</p>
                                 </div>
                             </CarouselItem>
-                            <CarouselItem lassName="basis-1/3">
+                            <CarouselItem className="basis-1/3">
                                 <div className="p-1 text-center text-xs">
                                     <p className='text-slate-400'>Sat, 03 Aug</p>
-                                    <p className='text-slate-400'> Check Availablity</p>
+                                    <p className='text-slate-400 text-[10px]'> Check Availablity</p>
                                 </div>
                             </CarouselItem>
-                            <CarouselItem lassName="basis-1/3">
+                            <CarouselItem className="basis-1/3">
                                 <div className="p-1 text-center text-xs">
                                     <p className='text-slate-400'>Sun, 04 Aug</p>
-                                    <p className='text-slate-400'> Check Availablity</p>
+                                    <p className='text-slate-400 text-[10px]'> Check Availablity</p>
                                 </div>
                             </CarouselItem>
                         </CarouselContent>
