@@ -19,7 +19,7 @@ import {
     CarouselItem,
     CarouselNext,
     CarouselPrevious,
-} from "@/components/ui/carousel"
+} from "@/components/ui/carousel2"
   
 const page = () => {
   return (
@@ -128,22 +128,45 @@ const page = () => {
                         opts={{
                             align: "start",
                         }}
-                        className="w-full max-w-sm px-4"
+                        className="w-full px-4"
                         >
                         <CarouselContent>
-                            {Array.from({ length: 5 }).map((_, index) => (
-                            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                                <div className="p-1">
-                                {index + 1}
+                            <CarouselItem lassName="basis-1/3">
+                                <div className="p-1 text-center text-xs">
+                                    <p className='text-slate-400'>Wed, 31 Jul</p>
+                                    <p className='text-[#00b7ac]'> No Slots Available</p>
                                 </div>
                             </CarouselItem>
-                            ))}
+                            <CarouselItem lassName="basis-1/3">
+                                <div className="p-1 text-center text-xs">
+                                    <p className='text-slate-400'>Thu, 01 Aug</p>
+                                    <p className='text-slate-400'> Check Availablity</p>
+                                </div>
+                            </CarouselItem>
+                            <CarouselItem lassName="basis-1/3">
+                                <div className="p-1 text-center text-xs">
+                                    <p className='text-slate-400'>Fri, 02 Aug</p>
+                                    <p className='text-slate-400'> Check Availablity</p>
+                                </div>
+                            </CarouselItem>
+                            <CarouselItem lassName="basis-1/3">
+                                <div className="p-1 text-center text-xs">
+                                    <p className='text-slate-400'>Sat, 03 Aug</p>
+                                    <p className='text-slate-400'> Check Availablity</p>
+                                </div>
+                            </CarouselItem>
+                            <CarouselItem lassName="basis-1/3">
+                                <div className="p-1 text-center text-xs">
+                                    <p className='text-slate-400'>Sun, 04 Aug</p>
+                                    <p className='text-slate-400'> Check Availablity</p>
+                                </div>
+                            </CarouselItem>
                         </CarouselContent>
-                        <CarouselPrevious className='h-6 w-6' />
+                        <CarouselPrevious className='h-6 w-6 ' />
                         <CarouselNext className='h-6 w-6'/>
                     </Carousel>
-                    <Button className='w-full bg-white border-2 hover:bg-transparent border-primary rounded-none font-normal text-xs text-primary mb-2' variant="outline">Next Available Slot</Button>
-                    <Button className='w-full btn-appoinment rounded-none font-normal text-xs text-primary hover:text-white mt-4 border-none' variant="outline">Request Call Back</Button>
+                    <Button className='w-full bg-white border-2 hover:bg-transparent border-primary font-normal text-xs text-primary mb-2 rounded-sm mt-4' variant="outline">Next Available Slot</Button>
+                    <Button className='w-full btn-appoinment font-normal text-xs text-primary hover:text-white mt-4 border-none rounded-sm' variant="outline">Request Call Back</Button>
                 </div>
             </div>
         </div>
