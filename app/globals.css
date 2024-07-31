@@ -122,6 +122,10 @@
     background: #284797; 
     border-radius: 10px;
   }
+  .blog ::-webkit-scrollbar-thumb {
+    background: #d8deeb; 
+    border-radius: 10px;
+  }
   .sub-menu-item{
     border-radius: 0px;
     font-weight: 500;

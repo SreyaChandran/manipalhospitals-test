@@ -23,7 +23,7 @@ import {
   
 const page = () => {
   return (
-    <div class="relative w-full max-w-[1660px] h-[900px] ">
+    <div className="relative w-full max-w-[1660px] h-[900px] ">
         <div className='w-full h-[180px] sm:h-[200px] md:h-[280px] lg:h-[320px] xl:h-[380px] 2xl:h-[450px] bg-[#00b7ac]'></div>
         <div className='mx-[2%] lg;mx-0 absolute top-0 w-[96%] lg:w-full pb-[50px] flex flex-col lg:flex-row items-start justify-center gap-6 py-[60px]'>
             <div className='w-full lg:w-[750px] min-h-[550px] flex flex-col gap-4'>
